@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bien-être, Bienveillance et Bientraitance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .forest-gradient {
+            background: linear-gradient(135deg, #14532d 0%, #064e3b 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            border-color: #059669;
+        }
+
+        /* Animation pour le tracé de la flèche */
+        @keyframes draw {
+            from {
+                stroke-dashoffset: 1500;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .path-animate {
+            stroke-dasharray: 1500;
+            stroke-dashoffset: 1500;
+            animation: draw 2.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-[#f0f4f0] text-[#1a2e1a] leading-relaxed">
+
+    <!-- Header -->
+    <header class="forest-gradient border-b border-emerald-900 py-12 px-4 shadow-lg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-emerald-50 mb-4 tracking-tight">Bien-être, Bienveillance et Bientraitance</h1>
+            <p class="text-lg text-emerald-200/80 max-w-2xl mx-auto font-light">
+                Clarification des concepts.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto py-12 px-6">
+        
+        <!-- Introduction -->
+        <div class="mb-16 text-center">
+            <p class="text-xl text-emerald-900/70 font-semibold">
+                Ces trois notions sont complémentaires mais se situent à des niveaux différents :<br>
+                l'état de l'animal, l'attitude de l'humain et les actions concrètes mises en place.
+            </p>
+        </div>
+
+        <!-- Section des cartes avec flèches de cycle -->
+        <div class="relative">
+            <div class="grid md:grid-cols-3 gap-8 mb-4 relative z-10">
+                <!-- Bienveillance -->
+                <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-semibold mb-4 text-slate-900">La Bienveillance</h2>
+                    <p class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">L'intention de l'humain</p>
+                    <p class="text-slate-600 mb-4">
+                        Une disposition d'esprit. C'est une qualité humaine qui consiste à vouloir le bien de l'autre et à être attentif à sa sensibilité.
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg text-sm text-blue-700 italic">
+                        Note : On peut être bienveillant mais mal agir par ignorance (ex: suralimentation).
+                    </div>
+                </section>
+
+                <!-- Bientraitance -->
+                <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-semibold mb-4 text-slate-900">La Bientraitance</h2>
+                    <p class="text-sm font-bold text-amber-600 uppercase tracking-wider mb-2">Les actes de l'humain</p>
+                    <p class="text-slate-600 mb-4">
+                        La mise en pratique de la bienveillance. L'ensemble des méthodes et soins quotidiens pour garantir le bien-être.
+                    </p>
+                    <p class="text-sm text-slate-500">
+                        C'est une obligation de moyens qui demande des compétences techniques et une connaissance approfondie de l'espèce.
+                    </p>
+                </section>
+
+                <!-- Bien-être -->
+                <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-semibold mb-4 text-slate-900">Le Bien-être</h2>
+                    <p class="text-sm font-bold text-green-600 uppercase tracking-wider mb-2">L'état de l'animal</p>
+                    <p class="text-slate-600 mb-4">
+                        Un état physique et mental positif lié à la satisfaction des besoins physiologiques et comportementaux. C'est un état mesurable scientifiquement.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li>• Absence de faim et soif</li>
+                        <li>• Absence de peur et détresse</li>
+                        <li>• Confort physique</li>
+                        <li>• Bonne santé (soins)</li>
+                        <li>• Expression des comportements naturels</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Flèche de retour cyclique à angles droits -->
+            <div class="hidden md:block w-full h-32 -mt-10 pointer-events-none relative">
+                <svg width="100%" height="100%" viewBox="0 0 1000 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible">
+                    <!-- Définition du dégradé pour la flèche -->
+                    <defs>
+                        <linearGradient id="arrowGradient" x1="830" y1="20" x2="170" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#16a34a" />
+                            <stop offset="50%" stop-color="#94a3b8" />
+                            <stop offset="100%" stop-color="#2563eb" />
+                        </linearGradient>
+                    </defs>
+                                        <!-- Pointe de flèche (Taille doublée et descendue de 10px : y initial 10 -> 20) -->
+                    <path d="M150 40 L 170 0 L 190 40" 
+                          fill="#2563eb" 
+                          class="opacity-90"
+                          transform="translate(0, 20)" />
+                      
+                    <!-- Chemin en U (Départ vertical bas, ligne droite, Arrivée verticale haut) -->
+                    <path d="M830 10 L 830 80 L 170 80 L 170 35" 
+                          stroke="url(#arrowGradient)" 
+                          stroke-width="4" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round"
+                          stroke-dasharray="1 8"
+                          class="path-animate" />
+                    
+    
+                    <!-- Label textuel stylisé -->
+                    <rect x="340" y="68" width="320" height="24" rx="12" fill="white" class="shadow-sm" />
+                    <text x="500" y="85" text-anchor="middle" fill="#475569" font-size="12" font-weight="600" class="uppercase tracking-widest">
+                        Rétroaction Éthique
+                    </text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Tableau Récapitulatif -->
+        <section class="bg-white rounded-2xl shadow-md border border-emerald-100 overflow-hidden mt-12">
+            <div class="p-6 border-b border-emerald-100 bg-emerald-900">
+                <h3 class="text-xl font-bold text-emerald-50">Synthèse comparative</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-emerald-50">
+                            <th class="p-4 font-semibold text-emerald-900">Notion</th>
+                            <th class="p-4 font-semibold text-emerald-900">Nature</th>
+                            <th class="p-4 font-semibold text-emerald-900">Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-emerald-50">
+                            <td class="p-4 font-medium text-emerald-700">Bienveillance</td>
+                            <td class="p-4">Psychologique / Éthique</td>
+                            <td class="p-4">L'intention ("Je veux son bien")</td>
+                        </tr>
+                        <tr class="border-b border-emerald-50">
+                            <td class="p-4 font-medium text-emerald-700">Bientraitance</td>
+                            <td class="p-4">Pratique / Technique</td>
+                            <td class="p-4">L'action ("Je m'en occupe bien")</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-emerald-800 font-bold">Bien-être</td>
+                            <td class="p-4">Scientifique / Biologique</td>
+                            <td class="p-4">Le résultat ("L'animal se sent bien")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-12 text-emerald-900/40 text-sm font-medium">
+        <p>Thomas Le Blanc - 2026</p>
+    </footer>
+
+</body>
+</html>
