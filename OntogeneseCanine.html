@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontogénèse du Chien - Chronologie</title>
+    <!-- Chargement des bibliothèques nécessaires uniquement -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .animate-in { animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .bg-forest-green {
+            background-color: #0b4619;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // Composant Icône utilisant Lucide
+        const LucideIcon = ({ name, className = "w-6 h-6" }) => {
+            useEffect(() => {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                }
+            }, [name]);
+            return <i data-lucide={name} className={className}></i>;
+        };
+
+        // --- Données ---
+        const periods = [
+            {
+                id: 'prenatal',
+                title: 'Prénatale',
+                subtitle: 'La fondation invisible',
+                duration: 'Gestation (~63 jours)',
+                icon: 'dna',
+                color: 'from-rose-500 to-rose-600',
+                description: "Avant même la naissance, le chiot perçoit son environnement via la mère.",
+                keyPoints: [
+                    "Sensibilité tactile précoce (réaction à la palpation dès 45 jours).",
+                    "Influence du stress maternel (cortisol) sur le tempérament futur.",
+                    "Apprentissage gustatif via le liquide amniotique."
+                ],
+                risks: "Stress intense de la mère = chiots plus réactifs et anxieux."
+            },
+            {
+                id: 'neonatal',
+                title: 'Néo-natale',
+                subtitle: 'Le monde des réflexes',
+                duration: '0 à 14 jours',
+                icon: 'baby',
+                color: 'from-blue-500 to-blue-600',
+                description: "Phase végétative. Le cerveau est encore immature (peu de circonvolutions).",
+                keyPoints: [
+                    "Sourds et aveugles (paupières et conduits auditifs clos).",
+                    "Réflexes de survie : succion, fouissement, réflexe périnéal.",
+                    "Sommeil paradoxal dominant (95%) crucial pour le développement cérébral."
+                ],
+                risks: "Absence de stimulation tactile = retard de développement nerveux."
+            },
+            {
+                id: 'transition',
+                title: 'Transition',
+                subtitle: 'L\'éveil des sens',
+                duration: '15 à 21 jours',
+                icon: 'eye',
+                color: 'from-amber-500 to-amber-600',
+                description: "Une phase courte mais intense de métamorphose sensorielle.",
+                keyPoints: [
+                    "Ouverture des yeux (J10-J15) et des oreilles (J14-J20).",
+                    "Début de l'attachement à la mère (reconnaissance visuelle).",
+                    "Premières tentatives de marche et élimination spontanée."
+                ],
+                risks: "Traumatismes sensoriels durant cette phase peuvent marquer durablement."
+            },
+            {
+                id: 'socialisation',
+                title: 'Socialisation',
+                subtitle: 'La fenêtre critique',
+                duration: '3 sem. à 3 mois',
+                icon: 'users',
+                color: 'from-emerald-500 to-emerald-600',
+                description: "La période la plus importante pour l'équilibre du futur chien adulte.",
+                keyPoints: [
+                    "Apprentissage des codes canins (morsure inhibée, postures).",
+                    "Familiarisation aux humains et aux bruits (base de données).",
+                    "Définition du seuil de l'homéostasie sensorielle."
+                ],
+                risks: "Syndrome de privation sensorielle si l'environnement est trop pauvre."
+            },
+            {
+                id: 'juvenile',
+                title: 'Juvénile',
+                subtitle: 'L\'autonomisation',
+                duration: '3 mois à la puberté',
+                icon: 'activity',
+                color: 'from-purple-500 to-purple-600',
+                description: "Consolidation des acquis et exploration du monde extérieur.",
+                keyPoints: [
+                    "Augmentation des capacités motrices et d'endurance.",
+                    "Phases de peur 'secondaires' possibles.",
+                    "Perfectionnement des techniques de chasse et de jeu."
+                ],
+                risks: "Désocialisation si les contacts avec les congénères cessent."
+            }
+        ];
+
+        const TimelinePage = () => {
+            const [selected, setSelected] = useState(periods[0]);
+
+            return (
+                <div className="animate-in">
+                    <div className="bg-forest-green rounded-3xl p-8 mb-10 text-white shadow-lg border-b-4 border-green-900">
+                        <div className="flex flex-col justify-center">
+                            <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2 text-center md:text-left">Ontogénèse Canine</h1>
+                            <p className="text-green-100 text-lg opacity-90 font-medium text-center md:text-left">Guide des étapes de développement du chiot</p>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col lg:flex-row gap-8">
+                        <div className="lg:w-1/3 space-y-3">
+                            {periods.map((p) => (
+                                <button
+                                    key={p.id}
+                                    onClick={() => setSelected(p)}
+                                    className={`w-full text-left p-4 rounded-2xl border-2 transition-all flex items-center justify-between group ${
+                                        selected.id === p.id 
+                                        ? 'border-green-600 bg-green-50 text-green-900 shadow-sm' 
+                                        : 'border-transparent bg-white text-slate-600 hover:border-slate-200 shadow-sm'
+                                    }`}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className={`p-2 rounded-lg ${selected.id === p.id ? 'bg-green-600 text-white' : 'bg-slate-100'}`}>
+                                            <LucideIcon name={p.icon} className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <div className="font-bold text-sm md:text-base">{p.title}</div>
+                                            <div className="text-xs opacity-70">{p.duration}</div>
+                                        </div>
+                                    </div>
+                                    <LucideIcon name="chevron-right" className={`w-4 h-4 ${selected.id === p.id ? 'translate-x-1' : 'opacity-30'}`} />
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="lg:flex-1">
+                            <div className="rounded-3xl bg-white shadow-xl overflow-hidden border border-slate-100">
+                                <div className={`h-32 bg-gradient-to-r ${selected.color} p-8 flex items-end text-white`}>
+                                    <div>
+                                        <h3 className="text-2xl md:text-3xl font-bold">{selected.title}</h3>
+                                        <p className="font-medium opacity-80 text-sm md:text-base">{selected.subtitle}</p>
+                                    </div>
+                                </div>
+                                <div className="p-6 md:p-8">
+                                    <p className="text-slate-600 mb-6 text-sm md:text-base italic">
+                                        {selected.description}
+                                    </p>
+                                    
+                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                        <LucideIcon name="check-circle" className="w-4 h-4" /> Acquisitions Clés
+                                    </h4>
+                                    <div className="grid gap-3 mb-8">
+                                        {selected.keyPoints.map((point, idx) => (
+                                            <div key={idx} className="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                                <div className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 text-xs font-bold">{idx+1}</div>
+                                                <p className="text-slate-700 text-sm leading-relaxed">{point}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="bg-rose-50 border border-rose-100 p-4 rounded-xl flex gap-3">
+                                        <LucideIcon name="alert-triangle" className="text-rose-500 w-5 h-5 flex-shrink-0" />
+                                        <div>
+                                            <p className="text-rose-900 font-bold text-sm">Risques</p>
+                                            <p className="text-rose-700 text-xs">{selected.risks}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const App = () => {
+            return (
+                <div className="min-h-screen pb-20">
+                    <main className="max-w-6xl mx-auto px-4 pt-12">
+                        <TimelinePage />
+                    </main>
+
+                    <footer className="mt-20 py-8 border-t border-slate-200 text-center">
+                        <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em]">
+                            Thomas Le Blanc - 2026
+                        </p>
+                    </footer>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
