@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biologie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .print-container { padding: 0 !important; margin: 0 !important; }
+            .card-emerald { background: white !important; color: black !important; border: 1px solid #e2e8f0 !important; box-shadow: none !important; }
+            .text-emerald-200, .text-emerald-300, .text-emerald-400 { color: black !important; }
+            h2 { break-before: auto; }
+        }
+
+        .card-emerald {
+            transition: transform 0.2s ease-in-out;
+        }
+        .card-emerald:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-emerald-50 text-emerald-950 min-h-screen">
+
+    <main class="max-w-4xl mx-auto p-4 md:p-10 space-y-16 print:space-y-8">
+        
+        <!-- Header -->
+        <header class="border-b-4 border-emerald-900 pb-6 print:mb-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-emerald-900 mb-2">Biologie</h1>
+        </header>
+
+        <!-- Section 1: Fondements -->
+        <section id="foundations" class="space-y-8 scroll-mt-8">
+            <h2 class="text-3xl font-bold text-emerald-900 border-b border-emerald-200 pb-4 print:text-black flex items-center">
+                <i data-lucide="leaf" class="mr-3 text-emerald-600"></i>
+                1. Les Fondements de la Vie
+            </h2>
+            
+            <div class="bg-emerald-900 p-6 rounded-lg shadow-xl border border-emerald-700 text-emerald-50 card-emerald">
+                <h3 class="text-xl font-bold mb-4 text-emerald-200">Qu'est-ce que la vie ?</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Délimitation par rapport à l'environnement.</li>
+                    <li>Capacité de reproduction.</li>
+                    <li>Métabolisme (échanges matière/énergie).</li>
+                    <li>Sensibilité à la sélection darwinienne.</li>
+                    <li><strong>Homéostasie :</strong> Maintien de l'équilibre intérieur.</li>
+                </ul>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 print:block print:space-y-4">
+                <div class="bg-emerald-900 p-5 rounded-lg border border-emerald-700 shadow-lg text-emerald-50 card-emerald">
+                    <h4 class="font-bold text-emerald-300 mb-2">Synthèse Abiotique</h4>
+                    <p class="text-sm">Formation de molécules simples puis complexes sur Terre (Expérience de Miller-Urey).</p>
+                </div>
+                <div class="bg-emerald-900 p-5 rounded-lg border border-emerald-700 shadow-lg text-emerald-50 card-emerald">
+                    <h4 class="font-bold text-emerald-300 mb-2">Panspermie</h4>
+                    <p class="text-sm">Apport des "briques de la vie" (acides aminés) par des météorites.</p>
+                </div>
+            </div>
+
+            <div class="bg-emerald-950 p-6 rounded-lg border border-emerald-800 shadow-inner text-emerald-100">
+                <h3 class="text-xl font-bold mb-4 text-emerald-400">Organisation Hiérarchique</h3>
+                <div class="flex flex-wrap items-center gap-2 text-sm font-medium">
+                    <span>Atomes</span> <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Molécules</span> <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Cellules</span> <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Organismes</span> <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Biosphère</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Génétique -->
+        <section id="genetics" class="space-y-8 scroll-mt-8">
+            <h2 class="text-3xl font-bold text-emerald-900 border-b border-emerald-200 pb-4 print:text-black flex items-center">
+                <i data-lucide="dna" class="mr-3 text-emerald-600"></i>
+                2. Hérédité & Génétique
+            </h2>
+
+            <div class="bg-emerald-900 p-6 rounded-xl shadow-lg border border-emerald-700 text-emerald-50 card-emerald">
+                <h3 class="text-xl font-bold text-emerald-300 mb-3">Les Lois de Mendel</h3>
+                <p class="mb-4">
+                    Expériences sur les pois. Découverte des allèles <strong>Dominants</strong> vs <strong>Récessifs</strong>.
+                    Ratio F2 classique : <span class="font-mono bg-emerald-800 text-emerald-200 px-2 py-1 rounded">3:1</span>.
+                </p>
+            </div>
+
+            <div class="bg-emerald-950 text-white p-8 rounded-xl shadow-2xl relative overflow-hidden border border-emerald-800">
+                <h3 class="text-xl font-bold mb-6 text-center text-emerald-300">Le Dogme Central</h3>
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center">
+                    <div class="bg-emerald-900 p-4 rounded-lg flex-1 w-full border border-emerald-800">
+                        <div class="font-bold text-lg text-emerald-300">ADN</div>
+                        <div class="text-xs text-emerald-500">Noyau</div>
+                    </div>
+                    <i data-lucide="arrow-right" class="text-emerald-600 hidden md:block"></i>
+                    <i data-lucide="arrow-down" class="text-emerald-600 md:hidden"></i>
+                    <div class="bg-emerald-900 p-4 rounded-lg flex-1 w-full border border-emerald-800">
+                        <div class="font-bold text-lg text-teal-300">ARN</div>
+                        <div class="text-xs text-emerald-500">Transcription</div>
+                    </div>
+                    <i data-lucide="arrow-right" class="text-emerald-600 hidden md:block"></i>
+                    <i data-lucide="arrow-down" class="text-emerald-600 md:hidden"></i>
+                    <div class="bg-emerald-900 p-4 rounded-lg flex-1 w-full border border-emerald-800">
+                        <div class="font-bold text-lg text-lime-300">PROTÉINE</div>
+                        <div class="text-xs text-emerald-500">Traduction</div>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm text-emerald-400 text-center italic">
+                    L'information (ADN) devient fonctionnelle (Protéine).
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 print:block print:space-y-4">
+                <div class="bg-emerald-900 p-5 rounded-lg border border-emerald-700 shadow-lg text-emerald-50 card-emerald">
+                    <h4 class="font-bold text-orange-400 flex items-center mb-2">
+                        <i data-lucide="microscope" class="w-4 h-4 mr-2"></i> Mutations
+                    </h4>
+                    <p class="text-sm">
+                        Source de variabilité. Peuvent être silencieuses, délétères ou bénéfiques.
+                        Types : Substitution, Insertion, Délétion.
+                    </p>
+                </div>
+                <div class="bg-emerald-900 p-5 rounded-lg border border-emerald-700 shadow-lg text-emerald-50 card-emerald">
+                    <h4 class="font-bold text-rose-400 flex items-center mb-2">
+                        <i data-lucide="heart-pulse" class="w-4 h-4 mr-2"></i> Maladies Héréditaires
+                    </h4>
+                    <ul class="text-xs space-y-1 text-emerald-100">
+                        <li><strong>Dominante :</strong> 1 seul allèle suffit (ex: Polykystose rénale chat).</li>
+                        <li><strong>Récessive :</strong> 2 allèles requis (ex: Myélopathie Berger Allemand).</li>
+                        <li><strong>Liée au sexe :</strong> Sur X ou Y (ex: Hémophilie).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Evolution -->
+        <section id="evolution" class="space-y-8 scroll-mt-8">
+            <h2 class="text-3xl font-bold text-emerald-900 border-b border-emerald-200 pb-4 print:text-black flex items-center">
+                <i data-lucide="activity" class="mr-3 text-emerald-600"></i>
+                3. Évolution
+            </h2>
+            
+            <div class="bg-emerald-900 p-6 rounded-xl shadow-xl border border-emerald-700 text-emerald-50 card-emerald">
+                <h3 class="text-xl font-bold text-emerald-300 mb-4">Sélection Naturelle (Darwin)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div class="p-4 bg-emerald-800 rounded-lg border border-emerald-700">
+                        <div class="font-bold text-emerald-200">Variation</div>
+                        <div class="text-sm">Différences entre individus</div>
+                    </div>
+                    <div class="p-4 bg-emerald-800 rounded-lg border border-emerald-700">
+                        <div class="font-bold text-emerald-200">Hérédité</div>
+                        <div class="text-sm">Transmission aux descendants</div>
+                    </div>
+                    <div class="p-4 bg-emerald-800 rounded-lg border border-emerald-700">
+                        <div class="font-bold text-emerald-200">Adaptation</div>
+                        <div class="text-sm">Survie différentielle</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 print:block print:space-y-4">
+                <div class="flex-1 bg-emerald-900 p-6 rounded-xl border border-emerald-700 shadow-lg text-emerald-50 card-emerald">
+                    <h4 class="font-bold text-lg mb-2 text-emerald-300">Valeur de Survie vs Viabilité</h4>
+                    <p class="text-sm mb-2">
+                        <strong>Valeur de survie :</strong> Contribution d'un trait à la survie immédiate (ex: camouflage).
+                    </p>
+                    <p class="text-sm">
+                        <strong>Viabilité :</strong> Capacité globale à transmettre ses gènes à la descendance.
+                    </p>
+                </div>
+                <div class="flex-1 bg-emerald-900 p-6 rounded-xl border border-emerald-700 shadow-lg text-emerald-50 card-emerald">
+                    <h4 class="font-bold text-lg mb-2 flex items-center text-emerald-300">
+                        <i data-lucide="brain" class="w-4 h-4 mr-2"></i> Inné vs Acquis
+                    </h4>
+                    <p class="text-sm mb-2 text-emerald-100 italic">
+                        Le comportement est une interaction complexe.
+                    </p>
+                    <ul class="list-disc pl-5 text-sm text-emerald-100">
+                        <li><strong>Expérience de Belyaev :</strong> Docilité modifiant le physique (renards).</li>
+                        <li><strong>Épigénétique :</strong> L'environnement modifie l'expression des gènes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Sélection Artificielle -->
+        <section id="selection" class="space-y-8 scroll-mt-8">
+            <h2 class="text-3xl font-bold text-rose-800 border-b border-rose-200 pb-4 print:text-black flex items-center">
+                <i data-lucide="alert-triangle" class="mr-3 text-rose-600"></i>
+                4. Sélection Artificielle & Dérives
+            </h2>
+
+            <div class="bg-emerald-900 border-l-8 border-rose-600 p-6 rounded-r-lg shadow-xl text-emerald-50">
+                <h3 class="text-xl font-bold text-rose-300 mb-2">Le Scandale des "Hyper-types"</h3>
+                <p class="text-emerald-100">
+                    La recherche d'une esthétique extrême au détriment de la santé. Un concept décrit comme "déviant et dangereux" où les animaux sont "programmés pour souffrir".
+                </p>
+            </div>
+
+            <h3 class="text-xl font-bold text-emerald-900 mt-6 print:text-black">Exemples Cliniques</h3>
+            <div id="breed-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 print:grid-cols-2 print:gap-4">
+                <div class="bg-emerald-900 p-4 rounded-lg shadow-xl border border-emerald-800 border-l-4 border-l-rose-500 card-emerald text-emerald-50">
+                    <h4 class="font-bold text-emerald-300">Bouledogue Français</h4>
+                    <div class="mt-2 text-xs font-semibold text-rose-300 uppercase tracking-wide">Problème : Brachycéphalie sévère</div>
+                    <p class="mt-1 text-sm text-emerald-200">Détresse respiratoire, thermorégulation défaillante.</p>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-lg shadow-xl border border-emerald-800 border-l-4 border-l-rose-500 card-emerald text-emerald-50">
+                    <h4 class="font-bold text-emerald-300">Berger Allemand</h4>
+                    <div class="mt-2 text-xs font-semibold text-rose-300 uppercase tracking-wide">Problème : Dos incliné (Hypertypé)</div>
+                    <p class="mt-1 text-sm text-emerald-200">Dysplasie de la hanche, troubles locomoteurs.</p>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-lg shadow-xl border border-emerald-800 border-l-4 border-l-rose-500 card-emerald text-emerald-50">
+                    <h4 class="font-bold text-emerald-300">Scottish Fold</h4>
+                    <div class="mt-2 text-xs font-semibold text-rose-300 uppercase tracking-wide">Problème : Anomalie du cartilage</div>
+                    <p class="mt-1 text-sm text-emerald-200">Oreilles pliées mais aussi atteinte du squelette entier.</p>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-lg shadow-xl border border-emerald-800 border-l-4 border-l-rose-500 card-emerald text-emerald-50">
+                    <h4 class="font-bold text-emerald-300">Cavalier King Charles</h4>
+                    <div class="mt-2 text-xs font-semibold text-rose-300 uppercase tracking-wide">Problème : Boîte crânienne réduite</div>
+                    <p class="mt-1 text-sm text-emerald-200">Syringomyélie (douleurs neurologiques).</p>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-lg shadow-xl border border-emerald-800 border-l-4 border-l-rose-500 card-emerald text-emerald-50">
+                    <h4 class="font-bold text-emerald-300">Chat Persan</h4>
+                    <div class="mt-2 text-xs font-semibold text-rose-300 uppercase tracking-wide">Problème : Face ultra-plate</div>
+                    <p class="mt-1 text-sm text-emerald-200">Problèmes oculaires et respiratoires.</p>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-lg shadow-xl border border-emerald-800 border-l-4 border-l-rose-500 card-emerald text-emerald-50">
+                    <h4 class="font-bold text-emerald-300">Pur-sang</h4>
+                    <div class="mt-2 text-xs font-semibold text-rose-300 uppercase tracking-wide">Problème : Sélection vitesse</div>
+                    <p class="mt-1 text-sm text-emerald-200">Syndrome de l'os fragile.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-16 text-center text-emerald-600 text-sm py-8 border-t border-emerald-200 no-print">
+            <p>© 2026 Thomas Le Blanc.</p>
+        </footer>
+    </main>
+
+    <script>
+        // Initialisation des icônes Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
