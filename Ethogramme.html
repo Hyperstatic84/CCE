@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éthogramme et Personnalité du Chien</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts: Inter & Merriweather -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ecfdf5; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #059669; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #047857; 
+        }
+
+        .card-hovering {
+            transition: all 0.3s ease;
+        }
+        .card-hovering:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.15), 0 8px 10px -6px rgba(5, 150, 105, 0.1);
+        }
+
+        .header-pattern {
+            background-image: radial-gradient(#10b981 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-emerald-50 text-gray-800 antialiased font-sans">
+
+    <!-- Hero Section -->
+    <header class="bg-emerald-900 py-24 px-4 relative overflow-hidden flex items-center justify-center">
+        <!-- Decoration background -->
+        <div class="absolute inset-0 opacity-10 header-pattern"></div>
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-emerald-400/20 rounded-full blur-3xl"></div>
+
+        <!-- Main Header Card -->
+        <div class="container mx-auto relative z-10 max-w-3xl">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-b-8 border-emerald-500 text-center transform transition-all duration-700 hover:scale-[1.01]">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-2xl mb-6">
+                    <i class="fas fa-paw text-3xl text-emerald-600"></i>
+                </div>
+                <h1 class="font-serif text-4xl md:text-6xl font-black text-emerald-900 mb-6 leading-tight">
+                    Comprendre le Chien
+                </h1>
+                <div class="w-20 h-1.5 bg-emerald-500 mx-auto mb-8 rounded-full"></div>
+                <p class="text-lg md:text-xl text-gray-600 font-light max-w-xl mx-auto leading-relaxed italic">
+                    "Entre la biologie ancrée de l'espèce et la singularité profonde du tempérament individuel."
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16 space-y-24">
+
+        <!-- PART I: ETHOGRAMME -->
+        <section id="ethogramme" class="scroll-mt-12">
+            <div class="flex items-center mb-12 border-b border-emerald-200 pb-4">
+                <div class="bg-emerald-600 p-4 rounded-2xl shadow-lg shadow-emerald-200 mr-5">
+                    <i class="fas fa-dna text-2xl text-white"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-emerald-900">I. L'Éthogramme</h2>
+                    <p class="text-emerald-600 font-medium uppercase tracking-wider text-xs mt-1">Répertoire comportemental de l'espèce</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Perceptions -->
+                <article class="bg-white rounded-2xl shadow-sm overflow-hidden border border-emerald-100 card-hovering">
+                    <div class="h-2 bg-emerald-500"></div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-gray-900">1. Perceptions Sensorielles</h3>
+                            <i class="fas fa-eye text-emerald-500 opacity-40 text-2xl"></i>
+                        </div>
+                        <ul class="space-y-5 text-sm text-gray-700">
+                            <li class="pl-4 border-l-2 border-emerald-100">
+                                <strong class="text-emerald-700 block mb-1">Olfaction (Dominant)</strong>
+                                Perçoit les molécules sur chaque objet. Organe voméro-nasal pour les phéromones sociales.
+                            </li>
+                            <li class="pl-4 border-l-2 border-emerald-100">
+                                <strong class="text-emerald-700 block mb-1">Vision</strong>
+                                Couleurs dichromatiques (bleu/jaune). Vision nocturne supérieure et détection accrue du mouvement.
+                            </li>
+                            <li class="pl-4 border-l-2 border-emerald-100">
+                                <strong class="text-emerald-700 block mb-1">Audition</strong>
+                                Perçoit les ultrasons (60kHz). Localisation spatiale précise grâce à la mobilité auriculaire.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Card 2: Biologie -->
+                <article class="bg-white rounded-2xl shadow-sm overflow-hidden border border-emerald-100 card-hovering">
+                    <div class="h-2 bg-emerald-500"></div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-gray-900">2. Comportements Biologiques</h3>
+                            <i class="fas fa-bone text-emerald-500 opacity-40 text-2xl"></i>
+                        </div>
+                        <div class="space-y-4 text-sm text-gray-700">
+                            <p>
+                                <strong class="text-emerald-700">Patrons-Moteurs :</strong> Séquences innées (téter, creuser) influencées par la génétique et l'environnement.
+                            </p>
+                            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 p-2 opacity-10">
+                                    <i class="fas fa-bolt text-3xl"></i>
+                                </div>
+                                <strong class="text-emerald-800 block mb-2 text-xs uppercase tracking-widest font-bold">Séquence de Prédation</strong>
+                                <p class="italic text-xs leading-relaxed text-emerald-900">
+                                    Orientation &rarr; Repérage &rarr; Approche &rarr; Poursuite &rarr; Capture &rarr; Mise à mort &rarr; Ingestion
+                                </p>
+                            </div>
+                            <p>
+                                <strong class="text-emerald-700">Repos :</strong> 8h à 14h de sommeil par jour. Sommeil paradoxal crucial pour le traitement cognitif.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Social -->
+                <article class="bg-white rounded-2xl shadow-sm overflow-hidden border border-emerald-100 card-hovering">
+                    <div class="h-2 bg-emerald-500"></div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-gray-900">3. Vie Sociale & Comms</h3>
+                            <i class="fas fa-comments text-emerald-500 opacity-40 text-2xl"></i>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed">
+                            <strong class="text-emerald-700">Structure :</strong> Fluidité et opportunisme. Éloignement du dogme de la hiérarchie linéaire stricte.
+                        </p>
+                        <div class="space-y-3">
+                            <strong class="text-emerald-700 block text-xs uppercase font-bold">Modes de Communication :</strong>
+                            <div class="space-y-2 text-xs">
+                                <div class="flex items-center bg-gray-50 p-2 rounded-lg border border-gray-100">
+                                    <i class="fas fa-wind w-6 text-emerald-400"></i>
+                                    <span><strong>Olfactive :</strong> Marquages et alarmes.</span>
+                                </div>
+                                <div class="flex items-center bg-gray-50 p-2 rounded-lg border border-gray-100">
+                                    <i class="fas fa-dog w-6 text-emerald-400"></i>
+                                    <span><strong>Visuelle :</strong> Mimiques, oreilles et queue.</span>
+                                </div>
+                                <div class="flex items-center bg-gray-50 p-2 rounded-lg border border-gray-100">
+                                    <i class="fas fa-bullhorn w-6 text-emerald-400"></i>
+                                    <span><strong>Acoustique :</strong> Variété des vocalisations.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex justify-center items-center gap-4">
+            <div class="h-px bg-emerald-200 flex-grow max-w-xs"></div>
+            <i class="fas fa-paw text-emerald-200"></i>
+            <div class="h-px bg-emerald-200 flex-grow max-w-xs"></div>
+        </div>
+
+        <!-- PART II: PERSONNALITE -->
+        <section id="personnalite" class="scroll-mt-12">
+            <div class="flex items-center mb-12 border-b border-emerald-200 pb-4">
+                <div class="bg-emerald-600 p-4 rounded-2xl shadow-lg shadow-emerald-200 mr-5">
+                    <i class="fas fa-fingerprint text-2xl text-white"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-emerald-900">II. Tempérament & Personnalité</h2>
+                    <p class="text-emerald-600 font-medium uppercase tracking-wider text-xs mt-1">Les différences individuelles</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Card 1: Définitions -->
+                <article class="bg-white rounded-2xl shadow-sm p-8 card-hovering border border-emerald-100 relative">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-emerald-50 rounded-bl-full flex items-center justify-center">
+                        <i class="fas fa-book text-emerald-200"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Concepts Clés</h3>
+                    <div class="space-y-4 text-sm text-gray-700">
+                        <p>
+                            <span class="font-bold text-emerald-700">Tempérament :</span> Socle biologique et héréditaire, visible dès le plus jeune âge.
+                        </p>
+                        <p>
+                            <span class="font-bold text-emerald-700">Personnalité :</span> Tempérament évolué, sculpté par l'expérience et l'environnement.
+                        </p>
+                        <div class="mt-6 p-4 bg-emerald-900 text-emerald-50 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-widest mb-1 opacity-70">Applications</p>
+                            <p class="text-sm">Sélection de chiens de travail, compatibilité en refuge, génétique.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Les Traits -->
+                <article class="bg-white rounded-2xl shadow-sm p-8 card-hovering border border-emerald-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Dimensions de la Personnalité</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-100">
+                            <strong class="text-emerald-800 block text-xs">Réactivité</strong>
+                            <span class="text-gray-600 text-xs">Excitabilité face aux stimuli.</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-100">
+                            <strong class="text-emerald-800 block text-xs">Peur/Courage</strong>
+                            <span class="text-gray-600 text-xs">Tendance à l'évitement.</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-100">
+                            <strong class="text-emerald-800 block text-xs">Sociabilité</strong>
+                            <span class="text-gray-600 text-xs">Attrait pour les interactions.</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-100">
+                            <strong class="text-emerald-800 block text-xs">Aptitude</strong>
+                            <span class="text-gray-600 text-xs">Capacité de concentration.</span>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-[10px] text-gray-400 italic text-right">Source: Modèle Jones & Gosling</p>
+                </article>
+
+                <!-- Card 3: Méthodes -->
+                <article class="bg-white rounded-2xl shadow-sm p-8 card-hovering border border-emerald-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Méthodes d'Évaluation</h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="bg-gray-100 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                                <i class="fas fa-flask text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-sm">Tests (ex: DMA)</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Situation standardisée et objective. Reflète l'instant T.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="bg-gray-100 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                                <i class="fas fa-clipboard-list text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-sm">Questionnaires (ex: C-BARQ)</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Historique comportemental riche. Sujet à la subjectivité humaine.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: Constance -->
+                <article class="bg-white rounded-2xl shadow-sm p-8 card-hovering border border-emerald-100 bg-emerald-50/30">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Constance & Prédictibilité</h3>
+                    <div class="space-y-4 text-sm leading-relaxed">
+                        <div class="flex items-start gap-3">
+                            <div class="text-emerald-600 mt-1"><i class="fas fa-infinity"></i></div>
+                            <p><span class="font-bold">Stabilité :</span> Relativement élevée chez l'adulte. La peur et l'agressivité peuvent s'atténuer par habituation.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="text-emerald-600 mt-1"><i class="fas fa-history"></i></div>
+                            <p><span class="font-bold">Le Chiot :</span> Les tests précoces (Campbell) sont peu prédictifs. La fiabilité se construit vers 6-12 mois.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer class="bg-white border-2 border-emerald-500 rounded-3xl p-10 md:p-14 text-center shadow-2xl relative overflow-hidden mt-12">
+            <div class="absolute top-0 right-0 p-8 opacity-5">
+                <i class="fas fa-quote-right text-8xl text-emerald-900"></i>
+            </div>
+            <h3 class="font-serif text-3xl font-bold text-emerald-900 mb-6 italic">Conclusion</h3>
+            <p class="max-w-4xl mx-auto leading-relaxed text-lg text-gray-700 font-light">
+                La compréhension du chien nécessite une <span class="text-emerald-700 font-semibold underline decoration-emerald-200 decoration-4">double approche</span> : connaître ses besoins biologiques et ses codes de communication (<strong>éthogramme</strong>) pour respecter son bien-être, tout en prenant en compte son individualité (<strong>personnalité</strong>) pour adapter son éducation et son environnement.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
