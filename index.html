@@ -36,17 +36,16 @@
             background-image: url("https://www.transparenttextures.com/patterns/leaf.png");
             opacity: 0.05;
         }
-
     </style>
 </head>
-<body class="text-white min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+<body class="text-white min-h-screen flex flex-col items-center relative overflow-y-auto">
     
-    <!-- Éléments d'arrière-plan -->
-    <div class="absolute inset-0 forest-gradient -z-20"></div>
-    <div class="absolute inset-0 overlay-pattern -z-10"></div>
+    <!-- Éléments d'arrière-plan (Fixés pour rester immobiles au scroll) -->
+    <div class="fixed inset-0 forest-gradient -z-20"></div>
+    <div class="fixed inset-0 overlay-pattern -z-10"></div>
     
     <!-- Contenu Principal -->
-    <main class="z-10 w-full max-w-2xl px-6 py-12 text-center">
+    <main class="z-10 w-full max-w-2xl px-6 py-12 md:py-20 text-center flex flex-col items-center">
         
         <!-- En-tête -->
         <header class="mb-12">
@@ -67,15 +66,15 @@
                 <span>Bien-Être Animal & Sentience</span>
             </a>
 
-             <a href="3B.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
+            <a href="3B.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
                 <span>Bien-être, Bienveillance et Bientraitance</span>
             </a>
 
-             <a href="Ethogramme.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
+            <a href="Ethogramme.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
                 <span>Ethogramme du chien</span>
             </a>
 
-             <a href="Biologie.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
+            <a href="Biologie.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
                 <span>Biologie</span>
             </a>
 
@@ -83,25 +82,10 @@
                 <span>Cognition / Métacognition</span>
             </a>
 
-            <!-- Boutons de Navigation            
-            <a href="#" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Éthologie Appliquée</span>
-                <span class="btn-icon">→</span>
-            </a>
-            
-            <a href="#" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Conseils & Blog</span>
-                <span class="btn-icon">→</span>
-            </a>
-            
-            <a href="#" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Prendre Rendez-vous</span>
-                <span class="btn-icon">→</span>
-            </a>
         </nav>
- -->
+
         <!-- Footer -->
-        <footer class="mt-16 text-gray-400 text-sm">
+        <footer class="mt-16 pb-8 text-gray-400 text-sm">
             <p>© 2026 Thomas Le Blanc</p>
         </footer>
 
