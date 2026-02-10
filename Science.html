@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relations Humain-Animal & Évolution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Personnalisation de la police */
+        body { font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Merriweather', serif; }
+        
+        /* Animation des cartes */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Schéma Pyramide */
+        .pyramid-level {
+            clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+            transition: transform 0.3s;
+        }
+        .pyramid-level:hover {
+            transform: scale(1.02);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            600: '#059669',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-700 antialiased">
+
+    <!-- Header avec carte verte -->
+    <header class="pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-emerald-800 p-8 md:p-12 rounded-3xl shadow-2xl text-center text-white relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight relative z-10">
+                    Relations Humain-Animal & Théorie de l'Évolution
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: Socio-Anthropologie -->
+    <section id="sociologie" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-bold tracking-wider uppercase text-sm">Partie 1</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">La Frontière Humain-Animal</h2>
+                <div class="text-slate-500 mt-4 max-w-2xl mx-auto">
+                    <p>Une construction sociale et culturelle marquée par une ambivalence contemporaine.</p>
+                </div>
+            </div>
+
+            <!-- Ambivalence Cards -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- Proximité -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-emerald-400 card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-emerald-100 rounded-full opacity-50 blur-xl"></div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-emerald-100 p-3 rounded-lg text-emerald-600">
+                            <i class="fas fa-hand-holding-heart fa-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Recherche de Proximité</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Engouement massif pour les animaux de compagnie. Personnification et médiatisation des animaux emblématiques.
+                    </p>
+                    <ul class="text-sm text-emerald-700 space-y-2">
+                        <li><i class="fas fa-check-circle text-xs mr-2"></i>Animal "membre de la famille"</li>
+                        <li><i class="fas fa-check-circle text-xs mr-2"></i>Services de soins humains (psy, oncologie)</li>
+                    </ul>
+                </div>
+
+                <!-- Distance -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-slate-400 card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-slate-200 rounded-full opacity-50 blur-xl"></div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-slate-100 p-3 rounded-lg text-slate-600">
+                            <i class="fas fa-shield-virus fa-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Besoin de Distance</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Réaffirmation de la barrière face aux risques directs ou sanitaires. Peur de l'animalité incontrôlée.
+                    </p>
+                    <ul class="text-sm text-slate-700 space-y-2">
+                        <li><i class="fas fa-exclamation-triangle text-xs mr-2"></i>Zoonoses (Grippe aviaire, Vache folle)</li>
+                        <li><i class="fas fa-exclamation-triangle text-xs mr-2"></i>Chiens "dangereux"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phrase sous les cartes -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="text-emerald-700 font-medium italic">
+                    Cette double tendance suggère une incertitude croissante quant à la "bonne place" des animaux dans la société moderne.
+                </p>
+            </div>
+
+            <!-- Comparaison Anthro vs Zoo -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-center mb-10 text-slate-900">Du XIXe Siècle à nos jours : Le Changement de Paradigme</h3>
+                <div class="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-xl">
+                    <!-- Anthropocentrisme -->
+                    <div class="bg-slate-800 text-slate-300 p-10">
+                        <h4 class="text-2xl text-white font-serif mb-4 flex items-center gap-2">
+                            <i class="fas fa-user-tie"></i> Anthropocentrisme
+                        </h4>
+                        <p class="mb-6 text-sm italic opacity-80">Vision instrumentale. L'animal pour l'humain.</p>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start">
+                                <span class="bg-slate-600 p-1 rounded mr-3 mt-1"><i class="fas fa-times text-xs"></i></span>
+                                <div>
+                                    <strong class="text-white">Dualisme Nature-Culture</strong><br>
+                                    Culture = Humain, Nature = Extérieur à dominer.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-slate-600 p-1 rounded mr-3 mt-1"><i class="fas fa-times text-xs"></i></span>
+                                <div>
+                                    <strong class="text-white">Zoologie Négative</strong><br>
+                                    L'animal défini par ce qu'il n'a pas (raison, âme).
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-slate-600 p-1 rounded mr-3 mt-1"><i class="fas fa-times text-xs"></i></span>
+                                <div>
+                                    <strong class="text-white">Domination</strong><br>
+                                    L'animal comme force de travail ou ressource.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Zoocentrisme -->
+                    <div class="bg-emerald-700 text-emerald-100 p-10">
+                        <h4 class="text-2xl text-white font-serif mb-4 flex items-center gap-2">
+                            <i class="fas fa-paw"></i> Zoocentrisme
+                        </h4>
+                        <p class="mb-6 text-sm italic opacity-80">Vision empathique. L'animal comme sujet moral.</p>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start">
+                                <span class="bg-emerald-500 p-1 rounded mr-3 mt-1"><i class="fas fa-check text-xs"></i></span>
+                                <div>
+                                    <strong class="text-white">Blessure Narcissique (Darwin)</strong><br>
+                                    L'homme descend de l'animal, fin du privilège.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-emerald-500 p-1 rounded mr-3 mt-1"><i class="fas fa-check text-xs"></i></span>
+                                <div>
+                                    <strong class="text-white">Protection Animale</strong><br>
+                                    Lois (Grammont 1850), SPA, anti-vivisection.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-emerald-500 p-1 rounded mr-3 mt-1"><i class="fas fa-check text-xs"></i></span>
+                                <div>
+                                    <strong class="text-white">Statut "Oisif"</strong><br>
+                                    L'animal de compagnie à fonction relationnelle.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Critiques et Hiérarchisation -->
+            <div class="max-w-3xl mx-auto mb-12">
+                <h3 class="text-2xl font-bold text-slate-900 mb-6 border-l-4 border-emerald-500 pl-4">Critiques et Hiérarchisation Animale</h3>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Le développement du zoocentrisme n'est pas sans ambiguïtés. Des chercheurs comme <strong>Sergio Dalla Bernardina</strong> suggèrent qu'il peut s'agir d'un anthropocentrisme déguisé, où l'amitié affichée masque des pulsions de domination et de subordination.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        De plus, l'empathie zoocentrique n'est pas universelle et s'applique selon une hiérarchie implicite, décrite par des concepts comme <strong>"l'échelle sociozoologique"</strong> (Arlucke et Sanders) :
+                    </p>
+                </div>
+            </div>
+
+            <!-- Schéma Pyramide Sociozoologique -->
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-bold text-center mb-6 text-emerald-800">L'Échelle Sociozoologique</h3>
+                
+                <div class="flex flex-col items-center gap-1 w-full max-w-md mx-auto">
+                    <!-- Top -->
+                    <div class="pyramid-level bg-emerald-600 text-white w-full p-4 text-center rounded-sm shadow-lg z-30">
+                        <i class="fas fa-dog text-2xl mb-1"></i>
+                        <div class="font-bold text-sm md:text-base">Animaux de Compagnie</div>
+                        <div class="text-xs opacity-90">Frontière abolie</div>
+                    </div>
+                    <!-- Middle Top -->
+                    <div class="pyramid-level bg-emerald-400 text-white w-[110%] p-4 text-center rounded-sm shadow-md z-20 -mt-2">
+                        <i class="fas fa-elephant text-2xl mb-1"></i>
+                        <div class="font-bold text-sm md:text-base">Mégafaune Sauvage</div>
+                        <div class="text-xs opacity-90">"Mediagenic megafauna" (Fascination)</div>
+                    </div>
+                    <!-- Middle Bottom -->
+                    <div class="pyramid-level bg-slate-400 text-white w-[120%] p-4 text-center rounded-sm shadow-md z-10 -mt-2">
+                        <i class="fas fa-cow text-2xl mb-1"></i>
+                        <div class="font-bold text-sm md:text-base">Animaux de Rente / Labo</div>
+                        <div class="text-xs opacity-90">Utilitaires, peu visibles</div>
+                    </div>
+                    <!-- Bottom -->
+                    <div class="pyramid-level bg-slate-600 text-white w-[130%] p-4 text-center rounded-sm shadow z-0 -mt-2">
+                        <i class="fas fa-spider text-2xl mb-1"></i>
+                        <div class="font-bold text-sm md:text-base">Nuisibles / Dangereux</div>
+                        <div class="text-xs opacity-90">Rejetés, exclus de l'empathie</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Biologie & Évolution -->
+    <section id="biologie" class="py-20 bg-emerald-900 text-white relative overflow-hidden">
+        <!-- Decoration background -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+             <i class="fas fa-dna absolute top-10 left-10 text-9xl"></i>
+             <i class="fas fa-dna absolute bottom-20 right-20 text-9xl"></i>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-emerald-300 font-bold tracking-wider uppercase text-sm">Partie 2</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">La Notion d'Espèce</h2>
+            </div>
+
+            <!-- La Révolution Darwinienne face au Fixisme -->
+            <div class="max-w-3xl mx-auto mb-20">
+                <div class="bg-emerald-800/40 p-8 rounded-2xl border border-emerald-600/30 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-emerald-300 mb-6 flex items-center gap-3">
+                        <i class="fas fa-seedling"></i> La Révolution Darwinienne face au Fixisme
+                    </h3>
+                    <p class="text-emerald-50 mb-6 leading-relaxed">
+                        Avant Darwin, la perception des espèces était dominée par le <strong>fixisme</strong> : les espèces étaient considérées comme immuables et créées une fois pour toutes. Les définitions de l'époque reposaient principalement sur la ressemblance et la reproduction :
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-emerald-500 rounded-full p-1"><i class="fas fa-circle text-[6px]"></i></div>
+                            <p class="text-emerald-100">
+                                <span class="font-bold text-white">Linné (1707-1778) :</span> « un ensemble d’individus qui engendrent par la reproduction d’autres individus semblables à eux-mêmes ».
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-emerald-500 rounded-full p-1"><i class="fas fa-circle text-[6px]"></i></div>
+                            <p class="text-emerald-100">
+                                <span class="font-bold text-white">Cuvier (1773-1838) :</span> « la réunion des individus descendus l’un de l’autre et de parents communs ».
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Definition Schema (3 Columns) -->
+            <div class="mb-20">
+                <h3 class="text-center text-2xl font-serif italic mb-12 text-emerald-300">Les 3 Piliers de la Définition Moderne</h3>
+                <div class="grid md:grid-cols-3 gap-8 md:gap-4 items-start">
+                    
+                    <!-- Pilier 1 -->
+                    <div class="flex flex-col items-center text-center px-4">
+                        <div class="w-48 h-48 rounded-full bg-emerald-800 border-4 border-emerald-500 flex flex-col justify-center items-center mb-6 shadow-xl card-hover">
+                            <i class="fas fa-ruler-combined text-3xl mb-3 text-emerald-300"></i>
+                            <h4 class="text-xl font-bold">Taxinomie</h4>
+                            <p class="text-xs text-emerald-400 mt-1 uppercase tracking-wider">Morphologie</p>
+                        </div>
+                        <p class="text-sm text-emerald-100 leading-relaxed bg-emerald-800/30 p-4 rounded-xl border border-emerald-700/50 min-h-[80px] flex items-center justify-center">
+                            Description et regroupement basé sur les caractères physiques.
+                        </p>
+                    </div>
+
+                    <!-- Pilier 2 -->
+                    <div class="flex flex-col items-center text-center px-4">
+                        <div class="w-48 h-48 rounded-full bg-emerald-800 border-4 border-emerald-500 flex flex-col justify-center items-center mb-6 shadow-xl card-hover">
+                            <i class="fas fa-project-diagram text-3xl mb-3 text-emerald-300"></i>
+                            <h4 class="text-xl font-bold">Phylogénétique</h4>
+                            <p class="text-xs text-emerald-400 mt-1 uppercase tracking-wider">Génétique</p>
+                        </div>
+                        <p class="text-sm text-emerald-100 leading-relaxed bg-emerald-800/30 p-4 rounded-xl border border-emerald-700/50 min-h-[80px] flex items-center justify-center">
+                            Liens ADN. Attention aux convergences évolutives (ex: Loup vs Loup de Tasmanie).
+                        </p>
+                    </div>
+
+                    <!-- Pilier 3 -->
+                    <div class="flex flex-col items-center text-center px-4">
+                        <div class="w-48 h-48 rounded-full bg-emerald-800 border-4 border-emerald-500 flex flex-col justify-center items-center mb-6 shadow-xl card-hover">
+                            <i class="fas fa-venus-mars text-3xl mb-3 text-emerald-300"></i>
+                            <h4 class="text-xl font-bold">Interfécondité</h4>
+                            <p class="text-xs text-emerald-400 mt-1 uppercase tracking-wider">Reproduction</p>
+                        </div>
+                        <p class="text-sm text-emerald-100 leading-relaxed bg-emerald-800/30 p-4 rounded-xl border border-emerald-700/50 min-h-[80px] flex items-center justify-center">
+                            Critère de Mayr (1942). Descendance fertile et isolement génétique.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Rhythms of Evolution -->
+            <div class="bg-emerald-800 rounded-3xl p-8 md:p-12 mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+                    <i class="fas fa-stopwatch text-emerald-400"></i> Les Rythmes de l'Évolution
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Gradualisme -->
+                    <div class="bg-emerald-900/50 p-6 rounded-xl border border-emerald-600/30">
+                        <div class="h-1 w-full bg-gradient-to-r from-emerald-500 to-transparent mb-4"></div>
+                        <h4 class="text-xl font-bold text-white mb-2">Gradualisme</h4>
+                        <p class="text-xs text-emerald-300 uppercase font-bold mb-3">Théorie Néodarwinienne</p>
+                        <p class="text-sm text-emerald-100">Lent, progressif, constant. Changements accumulés sur des siècles.</p>
+                        <span class="block mt-4 text-xs bg-emerald-800 text-emerald-200 py-1 px-2 rounded w-max">Ex: Coelacanthe</span>
+                    </div>
+
+                    <!-- Équilibres Ponctués -->
+                    <div class="bg-emerald-900/50 p-6 rounded-xl border border-emerald-600/30">
+                        <div class="h-1 w-full bg-gradient-to-r from-transparent via-emerald-500 to-transparent mb-4"></div>
+                        <h4 class="text-xl font-bold text-white mb-2">Équilibres Ponctués</h4>
+                        <p class="text-xs text-emerald-300 uppercase font-bold mb-3">Gould & Eldredge</p>
+                        <p class="text-sm text-emerald-100">Longues stases (stabilité) entrecoupées de transformations rapides.</p>
+                        <span class="block mt-4 text-xs bg-emerald-800 text-emerald-200 py-1 px-2 rounded w-max">Ex: Fossiles manquants</span>
+                    </div>
+
+                    <!-- Saltationnisme -->
+                    <div class="bg-emerald-900/50 p-6 rounded-xl border border-emerald-600/30">
+                        <div class="h-1 w-full bg-gradient-to-l from-emerald-500 to-transparent mb-4"></div>
+                        <h4 class="text-xl font-bold text-white mb-2">Saltationnisme</h4>
+                        <p class="text-xs text-emerald-300 uppercase font-bold mb-3">Mutations Brutales</p>
+                        <p class="text-sm text-emerald-100">Sauts évolutifs rapides, mutations génétiques majeures (Gènes Hox).</p>
+                        <span class="block mt-4 text-xs bg-emerald-800 text-emerald-200 py-1 px-2 rounded w-max">Ex: Virus VIH</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concepts Connexes et Enjeux de la Biodiversité -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-emerald-300 mb-8 border-l-4 border-emerald-500 pl-4">Concepts Connexes et Enjeux de la Biodiversité</h3>
+                <div class="grid gap-6">
+                    <!-- Sous-espèce -->
+                    <div class="bg-emerald-800/30 p-6 rounded-2xl border border-emerald-700/50 flex gap-6 items-start shadow-inner">
+                        <div class="bg-emerald-600/20 p-4 rounded-xl text-emerald-400">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 underline decoration-emerald-500 underline-offset-4">Sous-espèce</h4>
+                            <p class="text-emerald-100 text-sm leading-relaxed">
+                                Populations d'une même espèce qui sont géographiquement isolées et commencent à diverger génétiquement, mais qui pourraient encore se reproduire si elles entraient de nouveau en contact.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Race -->
+                    <div class="bg-emerald-800/30 p-6 rounded-2xl border border-emerald-700/50 flex gap-6 items-start shadow-inner">
+                        <div class="bg-emerald-600/20 p-4 rounded-xl text-emerald-400">
+                            <i class="fas fa-dog fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 underline decoration-emerald-500 underline-offset-4">Race</h4>
+                            <p class="text-emerald-100 text-sm leading-relaxed">
+                                Notion non scientifique reposant sur des critères subjectifs (souvent culturels ou commerciaux) pour décrire des variations au sein d'une même espèce (ex: races de chiens). Tous les individus peuvent se reproduire entre eux.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Biodiversité et Extinction -->
+                    <div class="bg-emerald-900/60 p-6 rounded-2xl border border-emerald-500/30 flex gap-6 items-start shadow-xl">
+                        <div class="bg-red-500/20 p-4 rounded-xl text-red-400">
+                            <i class="fas fa-biohazard fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 underline decoration-red-500 underline-offset-4">Biodiversité et Extinction</h4>
+                            <p class="text-emerald-100 text-sm leading-relaxed mb-3">
+                                On estime que <strong>90 %</strong> des espèces ayant existé sur Terre sont aujourd'hui éteintes. Des dizaines de millions d'espèces, principalement des insectes, restent à découvrir.
+                            </p>
+                            <p class="text-red-300 text-sm font-semibold italic">
+                                <i class="fas fa-chart-line mr-2 text-xs"></i>Le rythme d'extinction actuel est estimé être 10 à 100 fois supérieur au taux naturel préindustriel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- IMPACT SYNTHÉTISÉ -->
+    <section id="conclusion" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16">
+                <div class="w-16 h-1 w-24 bg-emerald-600 mx-auto mb-6"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 serif tracking-tight">
+                    Son impact
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-lg text-slate-700 leading-relaxed font-medium">
+                        La théorie darwinienne a profondément transformé notre vision du monde vivant, au-delà du simple cadre biologique.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Point 1 Synthétisé -->
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-8 border-emerald-600 shadow-sm flex flex-col h-full text-center">
+                    <div class="text-emerald-600 mb-4 text-3xl font-bold opacity-20 italic">01</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 serif">Ruine de l'Exceptionnalisme</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        L'ascendance commune déconstruit le dualisme nature-culture et l'anthropocentrisme, plaçant l'humain dans la continuité biologique du règne animal.
+                    </p>
+                </div>
+
+                <!-- Point 2 Synthétisé -->
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-8 border-emerald-600 shadow-sm flex flex-col h-full text-center">
+                    <div class="text-emerald-600 mb-4 text-3xl font-bold opacity-20 italic">02</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 serif">Légitimité du Zoocentrisme</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Cette parenté avérée fournit une base objective à l'empathie et à la considération morale des animaux, remplaçant la simple projection affective.
+                    </p>
+                </div>
+
+                <!-- Point 3 Synthétisé -->
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-8 border-emerald-600 shadow-sm flex flex-col h-full text-center">
+                    <div class="text-emerald-600 mb-4 text-3xl font-bold opacity-20 italic">03</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 serif">Frontières Dynamiques</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        L'impossibilité de tracer des limites biologiques figées pour l'espèce fait écho à la fluidité des frontières sociales et culturelles entre les espèces.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
