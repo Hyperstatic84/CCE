@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthèse : Épistémologie & Comportement Animal</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Theme Customization -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981', // Base Emerald
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46', // Deep Emerald
+                            900: '#064e3b',
+                            950: '#022c22',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar for Webkit */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #047857;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+    <!-- Simple Header (Green Card) -->
+    <header class="pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-emerald-900 text-white p-10 md:p-16 rounded-3xl shadow-2xl text-center relative overflow-hidden border border-emerald-800">
+                <!-- Subtle background pattern -->
+                <div class="absolute inset-0 opacity-10 pointer-events-none">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
+                </div>
+                
+                <div class="relative z-10">
+                    <h1 class="text-3xl md:text-5xl font-serif font-bold leading-tight">
+                        Épistémologie des Sciences
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Définition et Principes -->
+    <section id="science" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">Chapitre 1</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-2">Principes Fondamentaux de la Science</h2>
+                <div class="w-24 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Pillars -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500 hover:shadow-xl transition-shadow">
+                    <div class="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-emerald-700">
+                        <i data-lucide="scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Objectivité</h3>
+                    <p class="text-slate-600 text-sm">La connaissance ne doit pas dépendre des préjugés de l'observateur.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500 hover:shadow-xl transition-shadow">
+                    <div class="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-emerald-700">
+                        <i data-lucide="repeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Reproductibilité</h3>
+                    <p class="text-slate-600 text-sm">Une expérience doit pouvoir être reproduite avec les mêmes résultats.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500 hover:shadow-xl transition-shadow">
+                    <div class="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-emerald-700">
+                        <i data-lucide="shield-alert"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Falsifiabilité</h3>
+                    <p class="text-slate-600 text-sm">Une hypothèse doit pouvoir être testée et potentiellement réfutée.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+                <!-- Scientific Method -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-6 flex items-center gap-2">
+                        <i data-lucide="flask-conical"></i> La Méthode Scientifique
+                    </h3>
+                    <div class="relative pl-8 border-l-2 border-emerald-200 space-y-6">
+                        <div class="relative">
+                            <span class="absolute -left-[41px] bg-emerald-100 text-emerald-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">1</span>
+                            <h4 class="font-bold text-slate-800">Observation</h4>
+                            <p class="text-sm text-slate-500">Recueil de faits objectifs.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] bg-emerald-100 text-emerald-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">2</span>
+                            <h4 class="font-bold text-slate-800">Problématique</h4>
+                            <p class="text-sm text-slate-500">Formulation d'une question claire.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] bg-emerald-100 text-emerald-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">3</span>
+                            <h4 class="font-bold text-slate-800">Hypothèse</h4>
+                            <p class="text-sm text-slate-500">Proposition d'une explication testable.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] bg-emerald-100 text-emerald-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">4</span>
+                            <h4 class="font-bold text-slate-800">Expérimentation</h4>
+                            <p class="text-sm text-slate-500">Mise en place de protocoles pour tester l'hypothèse.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] bg-emerald-100 text-emerald-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">5</span>
+                            <h4 class="font-bold text-slate-800">Résultats</h4>
+                            <p class="text-sm text-slate-500">Analyse objective des données (souvent statistiques).</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] bg-emerald-100 text-emerald-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">6</span>
+                            <h4 class="font-bold text-slate-800">Conclusion</h4>
+                            <p class="text-sm text-slate-500">Validation ou invalidation de l'hypothèse.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white shadow-lg"><i data-lucide="refresh-ccw" class="w-4 h-4"></i></span>
+                            <h4 class="font-bold text-slate-800">Remise en question</h4>
+                            <p class="text-sm text-slate-500">Acceptation de corriger ou d'abandonner une hypothèse.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Science vs Pseudoscience -->
+                <div class="overflow-hidden rounded-xl border border-slate-200 shadow-sm bg-white p-6">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
+                        <i data-lucide="split"></i> Science vs Pseudoscience
+                    </h3>
+                    <table class="min-w-full divide-y divide-slate-200 mb-6">
+                        <thead class="bg-emerald-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-bold text-emerald-800 uppercase">Critère</th>
+                                <th class="px-4 py-3 text-center text-xs font-bold text-emerald-800 uppercase">Science</th>
+                                <th class="px-4 py-3 text-center text-xs font-bold text-slate-400 uppercase">Pseudo</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr>
+                                <td class="px-4 py-4 text-sm font-medium">Méthode</td>
+                                <td class="text-center text-emerald-700 text-[10px] font-bold uppercase tracking-tight">Claire</td>
+                                <td class="text-center text-red-400 text-[10px] font-bold uppercase tracking-tight">Floue ou absente</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 text-sm font-medium">Reproductibilité</td>
+                                <td class="text-center text-emerald-600"><i data-lucide="check-circle-2" class="inline w-5 h-5"></i></td>
+                                <td class="text-center text-red-400"><i data-lucide="x-circle" class="inline w-5 h-5"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 text-sm font-medium">Ouverture critique</td>
+                                <td class="text-center text-emerald-600"><i data-lucide="check-circle-2" class="inline w-5 h-5"></i></td>
+                                <td class="text-center text-red-400"><i data-lucide="x-circle" class="inline w-5 h-5"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 text-sm font-medium">Réfutabilité</td>
+                                <td class="text-center text-emerald-600"><i data-lucide="check-circle-2" class="inline w-5 h-5"></i></td>
+                                <td class="text-center text-red-400"><i data-lucide="x-circle" class="inline w-5 h-5"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pt-4 border-t border-slate-100 text-[13px] text-slate-600 leading-relaxed italic font-medium">
+                        Les savoirs empiriques, bien que non scientifiques en eux-mêmes, ne sont pas à rejeter. Ils peuvent servir de point de départ à l'observation et inspirer de nouvelles hypothèses scientifiques. Cependant, le fait qu'une méthode "marche" ne la rend pas automatiquement scientifique.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion Chapter 1 -->
+            <div class="bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded-r-xl shadow-sm">
+                <p class="text-slate-700 text-sm leading-relaxed italic">
+                    Cette méthode permet d'éviter des biais majeurs comme le <strong>biais de confirmation</strong> (chercher ce qui confirme son idée) et la <strong>sélection des données</strong> (ne voir que ce qui arrange).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Épistémologie -->
+    <section id="epistemology" class="py-16 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">Chapitre 2</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-2">Fondements de l'Épistémologie</h2>
+            </div>
+
+            <!-- Definition Box -->
+            <div class="mb-12 bg-white p-8 rounded-2xl shadow-sm border-l-4 border-emerald-500">
+                <p class="text-slate-700 leading-relaxed text-justify italic mb-4">
+                    "L'épistémologie est « l’étude critique des principes, des hypothèses et des résultats des diverses sciences, destinée à déterminer leur origine logique [...], leur valeur et leur portée objective » (André Lalande)."
+                </p>
+                <p class="text-slate-700 leading-relaxed text-justify">
+                    Issue des termes grecs <span class="text-emerald-700 font-semibold italic">epistêmê</span> (science) et <span class="text-emerald-700 font-semibold italic">logos</span> (discours), elle évalue la validité des connaissances scientifiques en s'interrogeant sur la nature de la preuve, les limites de l'observation et la construction des théories.
+                </p>
+            </div>
+
+            <!-- Main Figures -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Popper -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm relative group">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Falsifiabilité</div>
+                    <h3 class="text-2xl font-serif font-bold text-emerald-800 mb-2">Karl Popper</h3>
+                    <p class="text-slate-700 leading-relaxed text-sm">
+                        Une théorie est scientifique si elle peut être réfutée. La science progresse par élimination des erreurs, non par accumulation de confirmations.
+                    </p>
+                </div>
+                <!-- Kuhn -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm relative group">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Paradigmes</div>
+                    <h3 class="text-2xl font-serif font-bold text-emerald-800 mb-2">Thomas Kuhn</h3>
+                    <p class="text-slate-700 leading-relaxed text-sm">
+                        Le progrès scientifique s'opère par "révolutions". Un changement de paradigme survient quand les anomalies deviennent trop nombreuses.
+                    </p>
+                </div>
+                <!-- Hume -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm relative group">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Induction</div>
+                    <h3 class="text-2xl font-serif font-bold text-emerald-800 mb-2">David Hume</h3>
+                    <p class="text-slate-700 leading-relaxed text-sm">
+                        Il n'y n'a pas de fondement logique certain pour passer d'observations particulières à des lois générales. Ce problème renforce la vision de Popper d'une science déductive.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Other Figures Section -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-serif font-bold text-slate-800 mb-8 flex items-center gap-3">
+                    <i data-lucide="library" class="text-emerald-600"></i>
+                    Autres Figures et Courants
+                </h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Bacon -->
+                    <div class="bg-white/60 p-6 rounded-xl border border-emerald-100 shadow-sm">
+                        <h4 class="font-bold text-emerald-900 flex items-center gap-2 mb-2">
+                            <i data-lucide="flask-round" class="w-4 h-4"></i> Francis Bacon
+                        </h4>
+                        <p class="text-slate-600 text-sm">Promoteur de la méthode expérimentale inductive.</p>
+                    </div>
+                    <!-- Descartes -->
+                    <div class="bg-white/60 p-6 rounded-xl border border-emerald-100 shadow-sm">
+                        <h4 class="font-bold text-emerald-900 flex items-center gap-2 mb-2">
+                            <i data-lucide="help-circle" class="w-4 h-4"></i> René Descartes
+                        </h4>
+                        <p class="text-slate-600 text-sm">Partisan du doute méthodique et du rationalisme.</p>
+                    </div>
+                    <!-- Bachelard -->
+                    <div class="bg-white/60 p-6 rounded-xl border border-emerald-100 shadow-sm">
+                        <h4 class="font-bold text-emerald-900 flex items-center gap-2 mb-2">
+                            <i data-lucide="shield-alert" class="w-4 h-4"></i> Gaston Bachelard
+                        </h4>
+                        <p class="text-slate-600 text-sm">A analysé les "obstacles épistémologiques" qui freinent le progrès scientifique.</p>
+                    </div>
+                    <!-- Cercle de Vienne -->
+                    <div class="bg-white/60 p-6 rounded-xl border border-emerald-100 shadow-sm">
+                        <h4 class="font-bold text-emerald-900 flex items-center gap-2 mb-2">
+                            <i data-lucide="check-check" class="w-4 h-4"></i> Le Cercle de Vienne
+                        </h4>
+                        <p class="text-slate-600 text-sm">A promu le néopositivisme, n'admettant pour vrai que ce qui est vérifiable.</p>
+                    </div>
+                    <!-- Constructivisme -->
+                    <div class="bg-white/60 p-6 rounded-xl border border-emerald-100 shadow-sm lg:col-span-1">
+                        <h4 class="font-bold text-emerald-900 flex items-center gap-2 mb-2">
+                            <i data-lucide="shapes" class="w-4 h-4"></i> Le Constructivisme
+                        </h4>
+                        <p class="text-slate-600 text-sm">Suggère que notre image de la réalité est un produit de l'esprit en interaction avec elle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Comportement Animal -->
+    <section id="animal" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">Chapitre 3</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-2">Enjeux du Domaine</h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 mb-16">
+                <div class="flex-1 bg-emerald-900 text-white p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="binoculars"></i> L'éthologie (Lorenz, Tinbergen)</h3>
+                    <p class="text-emerald-100 text-sm">Observation en milieu naturel. Comportements innés et évolution.</p>
+                </div>
+                <div class="flex-1 bg-slate-100 p-8 rounded-2xl border border-slate-200">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-800"><i data-lucide="mouse-pointer-click"></i> Le béhaviorisme (Pavlov, Watson, Skinner)</h3>
+                    <p class="text-slate-600 text-sm">Expérimentation en laboratoire. Objectivité stimulus-réponse.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border-l-4 border-emerald-500 shadow-lg rounded-r-xl p-8">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">L'Anthropomorphisme</h3>
+                <div class="grid md:grid-cols-2 gap-8 text-sm leading-relaxed mb-6">
+                    <div>
+                        <h4 class="font-bold text-emerald-700">Canon de Morgan</h4>
+                        <p class="italic text-slate-500 my-2">Préférer l'explication la plus simple avant d'envisager des facultés psychiques complexes.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-red-700">Anthropodéni</h4>
+                        <p>Le risque de nier la continuité cognitive et émotionnelle entre les espèces par excès de rigueur.</p>
+                    </div>
+                </div>
+                <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100 text-sm text-slate-700 leading-relaxed italic">
+                    L'approche contemporaine prône un équilibre : ne pas interdire les termes humanisants ("joie", "tristesse") mais les relier systématiquement à des mesures objectives (postures, vocalisations, etc.).
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CRITÈRES D'OBSERVATION -->
+    <section id="observation" class="py-16 bg-emerald-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">Chapitre 4</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-2">Méthodes & Indicateurs d'Observation</h2>
+                <div class="w-24 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <p class="text-slate-700 text-sm mb-6">
+                        L'épistémologie impose de passer d'une description interprétative (ex: "l'animal est triste") à une définition <strong>topographique</strong> (description physique du mouvement).
+                    </p>
+                    
+                    <!-- 4 measures grid -->
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-4 bg-emerald-900 text-white rounded-lg">
+                            <span class="block text-xs uppercase opacity-70 mb-1">Indicateur 1</span>
+                            <h4 class="font-bold text-emerald-400">Latence</h4>
+                            <p class="text-xs mt-2">Délai entre le stimulus et le début de l'action.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-800 text-white rounded-lg">
+                            <span class="block text-xs uppercase opacity-70 mb-1">Indicateur 2</span>
+                            <h4 class="font-bold text-emerald-300">Fréquence</h4>
+                            <p class="text-xs mt-2">Nombre d'occurrences par unité de temps.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-700 text-white rounded-lg">
+                            <span class="block text-xs uppercase opacity-70 mb-1">Indicateur 3</span>
+                            <h4 class="font-bold text-emerald-200">Durée</h4>
+                            <p class="text-xs mt-2">Temps total alloué à un comportement spécifique.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-600 text-white rounded-lg">
+                            <span class="block text-xs uppercase opacity-70 mb-1">Indicateur 4</span>
+                            <h4 class="font-bold text-white">Intensité</h4>
+                            <p class="text-xs mt-2">Force ou amplitude (souvent via une échelle de score).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Sampling methods -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-800 text-white px-6 py-4 font-bold text-sm flex items-center gap-2">
+                        <i data-lucide="timer" class="w-4 h-4"></i> Méthodes d'Échantillonnage
+                    </div>
+                    <div class="p-0">
+                        <table class="min-w-full text-sm">
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-emerald-50 transition">
+                                    <td class="px-6 py-4 font-bold text-emerald-800 w-1/3 italic">Ad Libitum</td>
+                                    <td class="px-6 py-4 text-slate-600">Note libre de tout fait marquant. Idéal en phase exploratoire.</td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50 transition">
+                                    <td class="px-6 py-4 font-bold text-emerald-800 italic">Focal Sampling</td>
+                                    <td class="px-6 py-4 text-slate-600">Observation centrée sur un seul individu pendant un temps fixe.</td>
+                                </tr>
+                                <tr class="hover:bg-emerald-50 transition">
+                                    <td class="px-6 py-4 font-bold text-emerald-800 italic">Scan Sampling</td>
+                                    <td class="px-6 py-4 text-slate-600">Observation de tout le groupe à intervalles réguliers (états).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Reliability box -->
+                <div class="bg-emerald-900 text-emerald-50 p-8 rounded-xl flex flex-col justify-center relative overflow-hidden">
+                    <i data-lucide="users" class="absolute -bottom-8 -right-8 w-40 h-40 opacity-10"></i>
+                    <h3 class="text-xl font-bold mb-4 text-emerald-300">La Fiabilité Inter-observateurs</h3>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Pour valider l'objectivité, deux observateurs doivent obtenir les mêmes mesures sur le même sujet. On utilise le <strong>Kappa de Cohen</strong> pour quantifier ce degré d'accord.
+                    </p>
+                    <div class="flex items-center gap-3 p-4 bg-emerald-800/50 rounded-lg border border-emerald-700">
+                        <i data-lucide="info" class="w-5 h-5 text-emerald-400"></i>
+                        <span class="text-xs">C'est le gage ultime de la reproductibilité des observations.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Pratique -->
+    <section id="practice" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-emerald-400 font-bold uppercase tracking-wider text-sm">Chapitre 5</span>
+            <h2 class="text-3xl font-serif font-bold mb-10 mt-2">Posture du Comportementaliste</h2>
+            
+            <div class="grid sm:grid-cols-2 gap-6 text-left">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-emerald-500 p-2 rounded-lg"><i data-lucide="book-open" class="w-6 h-6 text-white"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Culture Scientifique</h4>
+                            <p class="text-emerald-100 text-xs">S'appuyer sur des études validées et publiées.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-emerald-500 p-2 rounded-lg"><i data-lucide="eye" class="w-6 h-6 text-white"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Rigueur & Mesure</h4>
+                            <p class="text-emerald-100 text-xs">Utiliser des éthogrammes pour objectiver le comportement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-emerald-500 p-2 rounded-lg"><i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Esprit Critique</h4>
+                            <p class="text-emerald-100 text-xs">Refuser le dogmatisme et actualiser ses connaissances.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-emerald-500 p-2 rounded-lg"><i data-lucide="heart-handshake" class="w-6 h-6 text-white"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Éthique Professionnelle</h4>
+                            <p class="text-emerald-100 text-xs">Justifier ses interventions sur des bases factuelles solides.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
