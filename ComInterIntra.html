@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication inter et intra spécifique du chien</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4; 
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .emerald-gradient {
+            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .diagram-node {
+            border: 2px solid #059669;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            position: relative;
+        }
+        .diagram-connector {
+            height: 2px;
+            background-color: #059669;
+            flex-grow: 1;
+        }
+        .perception-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+        .aggression-ladder-step {
+            transition: all 0.3s ease;
+        }
+        .aggression-ladder-step:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed">
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        
+        <!-- Titre Principal -->
+        <section class="mb-16">
+            <div class="emerald-gradient text-white p-10 md:p-16 rounded-[2rem] shadow-xl text-center">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+                    Communication inter et intra spécifique du chien
+                </h1>
+            </div>
+        </section>
+
+        <!-- Communication Intra-spécifique -->
+        <section class="mb-20">
+            <div class="flex items-center mb-10">
+                <div class="h-10 w-2 bg-emerald-600 mr-4 rounded-full"></div>
+                <h2 class="text-3xl font-bold text-emerald-900">La Communication Intra-spécifique</h2>
+            </div>
+
+            <!-- Canaux de Communication -->
+            <h3 class="text-xl font-bold mb-6 text-emerald-800 italic">Les Principaux Canaux de Communication</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100 card-hover">
+                    <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600 font-bold">1</div>
+                    <h4 class="font-bold mb-2">Gestuel</h4>
+                    <p class="text-xs text-slate-600">Postures, oreilles, queue, inclinaison du corps. Le canal le plus "rapide" visuellement.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100 card-hover">
+                    <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600 font-bold">2</div>
+                    <h4 class="font-bold mb-2">Olfactif</h4>
+                    <p class="text-xs text-slate-600">Phéromones, urine, marquage. Permet une communication asynchrone (dans le temps).</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100 card-hover">
+                    <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600 font-bold">3</div>
+                    <h4 class="font-bold mb-2">Auditif</h4>
+                    <p class="text-xs text-slate-600">Aboiements, grognements, couinements. Utilisé pour les longues distances ou l'alerte.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100 card-hover">
+                    <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600 font-bold">4</div>
+                    <h4 class="font-bold mb-2">Tactile</h4>
+                    <p class="text-xs text-slate-600">Contact épaule contre épaule, léchage, morsure. Renforce la cohésion ou exprime l'agacement.</p>
+                </div>
+            </div>
+
+            <!-- Signaux d'Apaisement -->
+            <div class="bg-emerald-900 text-white p-10 rounded-3xl mb-12 shadow-xl">
+                <div class="flex justify-between items-start mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold">Zoom sur les Signaux d'Apaisement</h3>
+                        <p class="opacity-80 italic">Inventoriés par Turid Rugaas, ils évitent la rupture sociale.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="border-l-2 border-emerald-400 pl-4">
+                        <h5 class="font-bold text-emerald-300">Le Détournement</h5>
+                        <p class="text-sm">Tourner la tête ou le corps entier pour signifier qu'on n'est pas une menace.</p>
+                    </div>
+                    <div class="border-l-2 border-emerald-400 pl-4">
+                        <h5 class="font-bold text-emerald-300">Le Bâillement</h5>
+                        <p class="text-sm">Réalisé hors contexte de fatigue, il indique un stress interne ou une tentative d'apaisement d'autrui.</p>
+                    </div>
+                    <div class="border-l-2 border-emerald-400 pl-4">
+                        <h5 class="font-bold text-emerald-300">Le Léchage de Truffe</h5>
+                        <p class="text-sm">Mouvement très rapide de la langue. Signe d'inconfort subtil souvent ignoré par l'humain.</p>
+                    </div>
+                    <div class="border-l-2 border-emerald-400 pl-4">
+                        <h5 class="font-bold text-emerald-300">Le Reniflage au sol</h5>
+                        <p class="text-sm">S'intéresser subitement au sol pour faire diversion et ralentir une approche trop directe.</p>
+                    </div>
+                    <div class="border-l-2 border-emerald-400 pl-4">
+                        <h5 class="font-bold text-emerald-300">Le Ralentissement</h5>
+                        <p class="text-sm">Marcher très lentement pour montrer qu'on ne vient pas charger l'autre individu.</p>
+                    </div>
+                    <div class="border-l-2 border-emerald-400 pl-4">
+                        <h5 class="font-bold text-emerald-300">Le Freezing (Immobilisation)</h5>
+                        <p class="text-sm">S'arrêter net. C'est le signal ultime avant une possible réaction défensive.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Échelle d'Agression -->
+            <div class="mb-16">
+                <h3 class="text-xl font-bold mb-8 text-emerald-800">L'Échelle d'Agression (Kendall Shepherd)</h3>
+                <p class="text-sm text-slate-600 mb-8 max-w-2xl">L'agression n'est jamais gratuite. Elle est le sommet d'une escalade de signaux non perçus ou ignorés.</p>
+                <div class="flex flex-col gap-2">
+                    <div class="aggression-ladder-step bg-emerald-100 p-3 rounded-lg flex items-center gap-4 text-emerald-900 border-l-8 border-emerald-400">
+                        <span class="font-bold w-24">VERT</span>
+                        <span class="text-sm">Signaux d'apaisement subtils (Léchage de truffe, détourner le regard).</span>
+                    </div>
+                    <div class="aggression-ladder-step bg-yellow-100 p-3 rounded-lg flex items-center gap-4 text-yellow-900 border-l-8 border-yellow-400">
+                        <span class="font-bold w-24">JAUNE</span>
+                        <span class="text-sm">Posture figée, patte levée, retrait, évitement actif.</span>
+                    </div>
+                    <div class="aggression-ladder-step bg-orange-100 p-3 rounded-lg flex items-center gap-4 text-orange-900 border-l-8 border-orange-400">
+                        <span class="font-bold w-24">ORANGE</span>
+                        <span class="text-sm">Grognement, retroussement de babines, aboiement de menace.</span>
+                    </div>
+                    <div class="aggression-ladder-step bg-red-100 p-3 rounded-lg flex items-center gap-4 text-red-900 border-l-8 border-red-500">
+                        <span class="font-bold w-24">ROUGE</span>
+                        <span class="text-sm">Claquement de dents (morsure dans le vide), puis morsure effective.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analyse de comportements -->
+            <div class="overflow-hidden rounded-2xl border border-emerald-100 shadow-sm bg-white">
+                <div class="bg-emerald-50 p-4 border-b border-emerald-100">
+                    <h4 class="font-bold text-emerald-900 text-sm">Signaux spécifiques et posture</h4>
+                </div>
+                <table class="w-full text-left">
+                    <tbody class="divide-y divide-emerald-50">
+                        <tr class="hover:bg-emerald-50/30 transition-colors">
+                            <td class="p-6 font-semibold align-top text-emerald-700 w-1/3 text-sm">Le Centre de Gravité</td>
+                            <td class="p-6 text-slate-600 text-sm">
+                                <strong>Vers l'avant :</strong> Intention d'interaction, curiosité ou menace (offensif).<br>
+                                <strong>Vers l'arrière :</strong> Inquiétude, peur ou préparation à la fuite (défensif).
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-emerald-50/30 transition-colors">
+                            <td class="p-6 font-semibold align-top text-emerald-700 text-sm">Mouvements de queue</td>
+                            <td class="p-6 text-slate-600 text-sm">Une queue haute et raide n'est pas "contente" : elle indique une forte excitation ou une alerte. La queue basse entre les membres indique une forte détresse.</td>
+                        </tr>
+                        <tr class="hover:bg-emerald-50/30 transition-colors">
+                            <td class="p-6 font-semibold align-top text-emerald-700 text-sm">La "Méta-communication"</td>
+                            <td class="p-6 text-slate-600 text-sm">L'appel au jeu (révérence) modifie le sens de tout ce qui suit : "ce qui arrive maintenant n'est que pour rire".</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Communication Inter-spécifique -->
+        <section class="mb-20 bg-emerald-50 -mx-4 px-4 py-16 rounded-[3rem] shadow-inner">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center mb-10">
+                    <div class="h-10 w-2 bg-emerald-600 mr-4 rounded-full"></div>
+                    <h2 class="text-3xl font-bold text-emerald-900">La Communication Inter-spécifique</h2>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-emerald-500 text-sm text-slate-600">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-4">Le Paradoxe de la Communication Verbale</h3>
+                        <p class="mb-4">Le chien décode prioritairement le <strong>paraverbal</strong> (ton, rythme) et la posture plutôt que le sens strict des mots.</p>
+                        <div class="bg-orange-50 p-4 rounded-xl border border-orange-200">
+                            <p class="text-sm font-semibold text-orange-800 mb-1">Attention à la "Double Contrainte" :</p>
+                            <p class="text-xs text-orange-700 italic">Exemple : Un "NON" hurlé avec une posture menaçante peut provoquer un "figement" de peur que l'humain prend pour de l'entêtement.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-emerald-500 text-sm text-slate-600">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-4">L'Importance des Trajectoires</h3>
+                        <p class="mb-4">La politesse canine passe par la courbe. L'humain, lui, est souvent rectiligne.</p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-4 bg-red-50 p-3 rounded-lg">
+                                <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2"></path></svg>
+                                <span><strong>Ligne Droite :</strong> Défi ou prédation.</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-emerald-50 p-3 rounded-lg">
+                                <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 15c4-10 12-10 16 0" stroke-width="2"></path></svg>
+                                <span><strong>Courbe :</strong> Intentions pacifiques.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tableau de perception -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-emerald-100 mb-16">
+                    <div class="bg-emerald-800 text-white p-6">
+                        <h3 class="text-xl font-bold">Action Humaine vs Perception Canine</h3>
+                    </div>
+                    <div class="grid md:grid-cols-1 divide-y divide-emerald-50">
+                        <div class="perception-grid p-6 hover:bg-emerald-50/50 transition-colors text-sm">
+                            <div class="font-semibold text-slate-700">Regarder fixement</div>
+                            <div class="text-emerald-500 font-bold text-center">➜</div>
+                            <div class="italic text-slate-600">"Je te menace".</div>
+                        </div>
+                        <div class="perception-grid p-6 hover:bg-emerald-50/50 transition-colors text-sm">
+                            <div class="font-semibold text-slate-700">Se pencher par-dessus</div>
+                            <div class="text-emerald-500 font-bold text-center">➜</div>
+                            <div class="italic text-slate-600">Intimidation physique forte.</div>
+                        </div>
+                        <div class="perception-grid p-6 hover:bg-emerald-50/50 transition-colors text-sm">
+                            <div class="font-semibold text-slate-700">Faire un câlin</div>
+                            <div class="text-emerald-500 font-bold text-center">➜</div>
+                            <div class="italic text-slate-600">Blocage anxiogène pour le chien.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication Involontaire -->
+                <div class="bg-emerald-900 text-white p-10 rounded-3xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-emerald-300">La Communication Involontaire</h3>
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div>
+                            <p class="opacity-90 text-sm mb-4 leading-relaxed">Les chiens captent nos signaux physiologiques incontrôlables :</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-3 text-sm"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Micro-tensions musculaires</li>
+                                <li class="flex items-center gap-3 text-sm"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Rythme cardiaque</li>
+                                <li class="flex items-center gap-3 text-sm"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Cortisol et Adrénaline</li>
+                            </ul>
+                        </div>
+                        <div class="bg-emerald-800/50 p-6 rounded-2xl border border-emerald-700">
+                            <h4 class="font-bold text-emerald-300 mb-2 text-sm">Contagion Émotionnelle</h4>
+                            <p class="text-xs opacity-80 italic">Votre stress se transmet instantanément au chien par vos émanations chimiques et votre rigidité posturale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Déconstruction de la Hiérarchie -->
+        <section class="mb-20 pb-12">
+            <div class="flex items-center mb-10">
+                <div class="h-10 w-2 bg-emerald-600 mr-4 rounded-full"></div>
+                <h2 class="text-3xl font-bold text-emerald-900">Déconstruction de la Hiérarchie</h2>
+            </div>
+
+            <!-- Évolution scientifique -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-100 mb-12">
+                <h3 class="text-xl font-bold mb-8 text-center text-emerald-800">Évolution de la compréhension scientifique</h3>
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="diagram-node w-full md:w-1/4 text-center">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">1940-1970</span>
+                        <p class="text-sm font-bold text-red-600">Modèle Alpha</p>
+                        <p class="text-xs italic">Groupes captifs.</p>
+                    </div>
+                    <div class="hidden md:block diagram-connector"></div>
+                    <div class="diagram-node w-full md:w-1/4 text-center">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">David Mech</span>
+                        <p class="text-sm font-bold text-blue-600">Unité Familiale</p>
+                        <p class="text-xs italic">Groupes sauvages.</p>
+                    </div>
+                    <div class="hidden md:block diagram-connector"></div>
+                    <div class="diagram-node w-full md:w-1/4 text-center border-emerald-500 bg-emerald-50">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">Aujourd'hui</span>
+                        <p class="text-sm font-bold text-emerald-700">Coopération</p>
+                        <p class="text-xs italic">Relation éthique.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start text-sm">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-emerald-800">Le Mythe de la Dominance</h3>
+                    <p class="text-slate-600 mb-4">Le chien n'est pas un loup domestiqué. L'idée que l'humain doit être un "alpha" détruit la confiance et la coopération au profit de la peur.</p>
+                    <div class="p-4 bg-red-50 border-l-4 border-red-500 text-red-800">
+                        Le rejet du coercitif n'est pas une option, c'est une nécessité scientifique et éthique.
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold mb-4 text-emerald-800">Implications Pratiques</h3>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">1</div>
+                        <p><strong>Renforcement Positif :</strong> Récompenser pour encourager l'apprentissage.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">2</div>
+                        <p><strong>Rejet du Coercitif :</strong> Bannir toute forme de violence physique ou psychologique.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">3</div>
+                        <p><strong>Éthique :</strong> Respecter les besoins fondamentaux et l'intégrité du chien.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
