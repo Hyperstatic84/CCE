@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprendre le Monde Sensoriel de l'Animal</title>
+    <!-- Tailwind CSS pour le style -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icônes Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Personnalisation de la sélection de texte */
+        ::selection {
+            background-color: #059669; /* emerald-600 */
+            color: #ffffff;
+        }
+        
+        /* Douceur d'apparition */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-300 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
+
+    <!-- En-tête -->
+    <header class="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-emerald-900/20 via-gray-950 to-gray-950 -z-10"></div>
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <div class="inline-flex items-center justify-center p-3 bg-emerald-900/30 rounded-full mb-6 border border-emerald-700/50">
+                <i data-lucide="paw-print" class="w-8 h-8 text-emerald-400"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+                Comprendre le Monde Sensoriel <br class="hidden sm:block"/>
+                <span class="text-emerald-400">de l'Animal</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
+                En tant qu'humains, nous avons tendance à croire que notre vision du monde est la seule qui existe. Pourtant, pour bien comprendre et interagir avec un animal, il est essentiel d'adopter une approche systémique et de le replacer au centre de son propre monde.
+                <br><br>
+                <span class="text-gray-300 font-medium">Trois grandes théories permettent de décoder ce monde :</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Contenu Principal (Cartes) -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Carte 1 : Umwelt -->
+            <article class="bg-gray-900 border border-emerald-800/50 rounded-2xl p-8 flex flex-col shadow-xl shadow-emerald-950/20 hover:border-emerald-500/50 transition-colors duration-300 fade-in delay-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-32 bg-emerald-600/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                
+                <header class="mb-6">
+                    <div class="w-12 h-12 bg-emerald-900/50 rounded-lg flex items-center justify-center mb-4 border border-emerald-700/50">
+                        <i data-lucide="globe" class="w-6 h-6 text-emerald-400"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white mb-2">1. L'Umwelt</h2>
+                    <p class="text-emerald-400 font-medium text-sm uppercase tracking-wider">"À chacun son monde"</p>
+                </header>
+                
+                <div class="flex-grow">
+                    <p class="text-gray-400 mb-5 text-sm leading-relaxed">
+                        L'Umwelt (de l'allemand signifiant "environnement") est une théorie qui explique que chaque être vivant vit dans une version subjective et unique du monde, façonnée par ses propres capacités sensorielles et ses besoins. La réalité objective n'existe pas pour l'animal ; il ne perçoit que ce qui a du sens ou une fonction pour lui.
+                    </p>
+                    <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">Le filtre sensoriel :</strong> Un chien percevra son environnement principalement par les odeurs (souvent imperceptibles pour nous), tandis qu'un humain se fiera d'abord à sa vue. Un oiseau migrateur percevra les champs magnétiques.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">Le monde fonctionnel :</strong> Un objet n'est pas perçu pour ce qu'il est, mais pour sa fonction. Pour un chat, une souris n'est pas "un animal", c'est "une proie".</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">L'exemple de la tique :</strong> Bien qu'aveugle et sourde, la tique possède un monde très riche basé sur la chaleur et l'odeur (acide butyrique) dégagée par les mammifères.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mt-auto bg-emerald-950/40 rounded-xl p-5 border border-emerald-800/60 flex gap-4">
+                    <i data-lucide="lightbulb" class="w-6 h-6 text-emerald-400 flex-shrink-0"></i>
+                    <p class="text-sm text-emerald-100">
+                        <strong class="text-emerald-300 block mb-1">L'astuce pratique</strong>
+                        Pour régler un problème de comportement, demandez-vous toujours quels stimuli (bruits, odeurs) l'animal perçoit dans son Umwelt et que vous pourriez ignorer.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Carte 2 : Gestalt -->
+            <article class="bg-gray-900 border border-emerald-800/50 rounded-2xl p-8 flex flex-col shadow-xl shadow-emerald-950/20 hover:border-emerald-500/50 transition-colors duration-300 fade-in delay-200 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-32 bg-emerald-600/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+
+                <header class="mb-6">
+                    <div class="w-12 h-12 bg-emerald-900/50 rounded-lg flex items-center justify-center mb-4 border border-emerald-700/50">
+                        <i data-lucide="layers" class="w-6 h-6 text-emerald-400"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white mb-2">2. La Gestalt</h2>
+                    <p class="text-emerald-400 font-medium text-sm uppercase tracking-wider">"Voir l'ensemble plutôt que les détails"</p>
+                </header>
+                
+                <div class="flex-grow">
+                    <p class="text-gray-400 mb-5 text-sm leading-relaxed">
+                        La Gestalt est une théorie de la psychologie cognitive qui explique que "le tout est différent de la somme de ses parties". Notre cerveau (et celui des animaux) a naturellement tendance à regrouper les informations pour créer un ensemble structuré et cohérent.
+                    </p>
+                    <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">Une perception globale :</strong> Un animal ne réagit pas à des signaux isolés, mais à une configuration globale.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">L'importance du contexte :</strong> Un chien qui entend "viens" analyse votre ton, posture, regard et orientation. Si la voix est douce mais la posture menaçante, cela crée de la confusion.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">Figure et fond :</strong> L'animal distingue des éléments saillants (la figure) sur un environnement (le fond). Après un traumatisme, un bruit anodin peut soudain devenir une menace majeure.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mt-auto bg-emerald-950/40 rounded-xl p-5 border border-emerald-800/60 flex gap-4">
+                    <i data-lucide="lightbulb" class="w-6 h-6 text-emerald-400 flex-shrink-0"></i>
+                    <p class="text-sm text-emerald-100">
+                        <strong class="text-emerald-300 block mb-1">L'astuce pratique</strong>
+                        N'analysez jamais un comportement isolé (ex: un grognement). Prenez toujours en compte le contexte global, l'état émotionnel, et assurez-vous que votre propre communication corporelle est cohérente.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Carte 3 : Proxémique -->
+            <article class="bg-gray-900 border border-emerald-800/50 rounded-2xl p-8 flex flex-col shadow-xl shadow-emerald-950/20 hover:border-emerald-500/50 transition-colors duration-300 fade-in delay-300 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-32 bg-emerald-600/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+
+                <header class="mb-6">
+                    <div class="w-12 h-12 bg-emerald-900/50 rounded-lg flex items-center justify-center mb-4 border border-emerald-700/50">
+                        <i data-lucide="expand" class="w-6 h-6 text-emerald-400"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white mb-2">3. La Proxémique</h2>
+                    <p class="text-emerald-400 font-medium text-sm uppercase tracking-wider">"La gestion des distances et de l'espace"</p>
+                </header>
+                
+                <div class="flex-grow">
+                    <p class="text-gray-400 mb-5 text-sm leading-relaxed">
+                        Développée par Edward T. Hall, la proxémique étudie l'utilisation de l'espace et des distances lors des interactions. Chez les animaux, la gestion de ces distances est vitale car elle est directement liée à leur survie et à leur équilibre émotionnel.
+                    </p>
+                    <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">La distance personnelle :</strong> La bulle protectrice de l'animal. Elle varie selon que l'animal est une espèce de "contact" (qui aime la proximité, comme le porc) ou de "distance" (chien, cheval).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">La distance de fuite :</strong> L'espace minimal (zone de confort) face à une menace. Si un intrus la franchit, l'animal réagira par la fuite ou l'agression.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                            <span><strong class="text-white">La distance critique :</strong> La zone de survie ou d'urgence extrême. Si la fuite est impossible (ex: chien en laisse courte), la peur déclenche des stratégies de survie (agression, immobilisation).</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mt-auto bg-emerald-950/40 rounded-xl p-5 border border-emerald-800/60 flex gap-4">
+                    <i data-lucide="lightbulb" class="w-6 h-6 text-emerald-400 flex-shrink-0"></i>
+                    <p class="text-sm text-emerald-100">
+                        <strong class="text-emerald-300 block mb-1">L'astuce pratique</strong>
+                        L'agressivité chez le chien (notamment en laisse) est souvent due à une impossibilité de fuir lorsque sa distance critique est violée. Le travail visera à réduire progressivement cette distance via l'habituation.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Pied de page / Résumé -->
+    <footer class="mt-auto bg-gray-900 border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8 mt-12 fade-in delay-300">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center justify-center p-2 bg-gray-800 rounded-full mb-4">
+                <i data-lucide="quote" class="w-5 h-5 text-gray-400"></i>
+            </div>
+            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
+                En résumé, pour comprendre un animal, il faut comprendre <span class="text-emerald-400 font-medium">ce qu'il perçoit</span> (Umwelt), <span class="text-emerald-400 font-medium">comment il organise</span> cette perception (Gestalt) et <span class="text-emerald-400 font-medium">comment il utilise l'espace</span> en conséquence (Proxémique).
+            </p>
+
+            <div class="mt-10 pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-12 text-sm text-gray-400">
+                <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-semibold tracking-wider uppercase text-xs">Umwelt</span>
+                    <span class="text-gray-600">|</span>
+                    <span class="text-gray-300">Le monde perçu</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-semibold tracking-wider uppercase text-xs">Gestalt</span>
+                    <span class="text-gray-600">|</span>
+                    <span class="text-gray-300">La forme du perçu</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-emerald-500 font-semibold tracking-wider uppercase text-xs">Proxémie</span>
+                    <span class="text-gray-600">|</span>
+                    <span class="text-gray-300">L'espace du perçu</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialisation des icônes -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
