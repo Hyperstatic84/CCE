@@ -198,7 +198,7 @@
 
         const App = () => {
             return (
-                <div className="min-h-screen">
+                <div className="min-h-screen relative pb-8">
                     <main className="max-w-6xl mx-auto px-4 pt-12 pb-20">
                         <TimelinePage />
 
@@ -258,21 +258,25 @@
                                         </p>
                                     </div>
                                 </div>
-    </a>
-
+                                
                             </div>
                         </div>
                     </main>
 
-    
-                    <footer className="py-8 border-t border-slate-200 text-center bg-white">
+                    <footer className="py-8 border-t border-slate-200 text-center bg-white mt-auto">
                         <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em]">
                             © 2026 Thomas Le Blanc
                         </p>
-                <a href="index.html" class="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-lg shadow-emerald-900/50 transition-all duration-300 z-50 flex items-center justify-center hover:-translate-y-1 group fade-in delay-300" aria-label="Retour à l'accueil">
-        <i data-lucide="home" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
-    </a>
                     </footer>
+
+                    {/* BOUTON FLOTTANT RETOUR */}
+                    <a 
+                        href="index.html" 
+                        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-forest-green text-white p-4 rounded-full shadow-lg border-2 border-white hover:bg-green-800 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 z-50 group flex items-center justify-center"
+                        title="Retour à l'accueil"
+                    >
+                        <LucideIcon name="arrow-left" className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
+                    </a>
                 </div>
             );
         };
@@ -280,8 +284,5 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
-
 </body>
 </html>
-
-
