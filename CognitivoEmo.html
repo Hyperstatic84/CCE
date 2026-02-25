@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réponse cognitivo-émotionnelle - PNEIA (Psycho-Neuro-Endocrino-Immunologie Animale)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #064e3b; /* Deep Emerald */
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .emerald-card {
+            background-color: #065f46;
+            border: 1px solid #059669;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .emerald-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .accent-text {
+            color: #34d399; /* Light Emerald */
+        }
+        .diagram-node {
+            background: #10b981;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .connector {
+            height: 2px;
+            background: #34d399;
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Header / Hero -->
+    <header class="max-w-6xl mx-auto text-center mb-16 py-12">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+            Réponse cognitivo-émotionnelle - <br class="hidden md:block" />
+            <span class="text-xl md:text-3xl font-medium text-emerald-300 mt-2 inline-block">PNEIA (Psycho-Neuro-Endocrino-Immunologie Animale)</span>
+        </h1>
+    </header>
+
+    <!-- Section 1: Fondements -->
+    <section class="max-w-6xl mx-auto mb-20">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3-xl font-bold border-l-4 border-emerald-400 pl-4 uppercase tracking-wider">Les Fondements</h2>
+                <p class="text-lg leading-relaxed">
+                    Selon Jaak Panksepp, la nature s'adresse aux mammifères via un langage ancestral et inné. Les émotions ne s'apprennent pas : elles sont précâblées dans les régions sous-corticales.
+                </p>
+                <div class="bg-emerald-800 p-6 rounded-xl italic">
+                    "Comme les touches d’un piano, les émotions sont là et attendent seulement d’être appuyées pour créer un accord."
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="emerald-card p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">🧬</div>
+                    <h3 class="font-bold">Innéité</h3>
+                    <p class="text-xs text-emerald-200">Systèmes câblés dès la naissance</p>
+                </div>
+                <div class="emerald-card p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">🧠</div>
+                    <h3 class="font-bold">Sous-cortical</h3>
+                    <p class="text-xs text-emerald-200">Tronc cérébral & Système Limbique</p>
+                </div>
+                <div class="emerald-card p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">⚖️</div>
+                    <h3 class="font-bold">Valeur</h3>
+                    <p class="text-xs text-emerald-200">Évaluation de la survie</p>
+                </div>
+                <div class="emerald-card p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">📈</div>
+                    <h3 class="font-bold">Apprentissage</h3>
+                    <p class="text-xs text-emerald-200">Guide la maturation corticale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Les 7 Systèmes Affectifs (Le "Big 7") -->
+    <section class="max-w-6xl mx-auto mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-center uppercase tracking-widest">Les 7 Circuits Émotionnels</h2>
+        
+        <!-- Système Central -->
+        <div class="mb-8">
+            <div class="emerald-card p-8 rounded-2xl border-2 border-emerald-300 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 bg-emerald-300 text-emerald-900 font-bold uppercase text-xs">Système Fondamental</div>
+                <h3 class="text-2xl font-bold mb-2">SEEKING <span class="text-emerald-300 font-light">(Recherche / Désir)</span></h3>
+                <p class="mb-4">Le moteur de l'exploration et de la curiosité. Pousse l'animal à chercher des ressources.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-emerald-900 px-3 py-1 rounded text-xs border border-emerald-500">Dopamine</span>
+                    <span class="bg-emerald-900 px-3 py-1 rounded text-xs border border-emerald-500">Glutamate</span>
+                    <span class="bg-emerald-900 px-3 py-1 rounded text-xs border border-emerald-500">Anticipation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Défense / Négatif -->
+            <div class="space-y-4">
+                <h4 class="text-center font-bold text-red-300 uppercase text-sm">Systèmes de Défense</h4>
+                <div class="emerald-card p-6 rounded-xl">
+                    <h5 class="font-bold accent-text">FEAR (Peur)</h5>
+                    <p class="text-sm mt-2">Évitement de la douleur. Géré par l'Amygdale latérale.</p>
+                    <p class="text-xs mt-2 italic text-emerald-200">Modulateur : Glutamate</p>
+                </div>
+                <div class="emerald-card p-6 rounded-xl">
+                    <h5 class="font-bold accent-text">ANGER (Colère/Rage)</h5>
+                    <p class="text-sm mt-2">Réaction à la frustration ou à la contrainte physique.</p>
+                    <p class="text-xs mt-2 italic text-emerald-200">Modulateur : Substance P</p>
+                </div>
+                <div class="emerald-card p-6 rounded-xl">
+                    <h5 class="font-bold accent-text">PANIC (Panique/Deuil)</h5>
+                    <p class="text-sm mt-2">Détresse de séparation. Vital pour l'attachement social.</p>
+                    <p class="text-xs mt-2 italic text-emerald-200">Modulateur : CRH</p>
+                </div>
+            </div>
+
+            <!-- Prosociaux / Positif -->
+            <div class="space-y-4">
+                <h4 class="text-center font-bold text-blue-300 uppercase text-sm">Systèmes Prosociaux</h4>
+                <div class="emerald-card p-6 rounded-xl">
+                    <h5 class="font-bold accent-text">CARE (Soins)</h5>
+                    <p class="text-sm mt-2">Dévouement maternel et éducation.</p>
+                    <p class="text-xs mt-2 italic text-emerald-200">Ocytocine / Prolactine</p>
+                </div>
+                <div class="emerald-card p-6 rounded-xl">
+                    <h5 class="font-bold accent-text">LUST (Désir sexuel)</h5>
+                    <p class="text-sm mt-2">Libido et reproduction de l'espèce.</p>
+                    <p class="text-xs mt-2 italic text-emerald-200">Hormones sexuelles</p>
+                </div>
+                <div class="emerald-card p-6 rounded-xl">
+                    <h5 class="font-bold accent-text">SOCIAL PLAY (Jeu)</h5>
+                    <p class="text-sm mt-2">Apprentissage social et motricité. Génère de la joie.</p>
+                    <p class="text-xs mt-2 italic text-emerald-200">Opioïdes / Glutamate</p>
+                </div>
+            </div>
+
+            <!-- Hub Central Schema -->
+            <div class="flex flex-col justify-center items-center bg-emerald-900 rounded-2xl p-6 border border-emerald-500/30">
+                <h4 class="font-bold mb-6 text-sm uppercase">Schéma du Hub Émotionnel</h4>
+                <div class="w-full space-y-4">
+                    <div class="diagram-node bg-emerald-600">Inputs Sensoriels</div>
+                    <div class="flex justify-center italic text-xs">⬇️</div>
+                    <div class="diagram-node border-2 border-emerald-300 bg-emerald-700">AMYGDALE (Hub)</div>
+                    <div class="flex justify-center italic text-xs">⬇️</div>
+                    <div class="diagram-node bg-emerald-600">Systèmes Affectifs</div>
+                </div>
+                <p class="text-xs mt-6 text-center text-emerald-200">L'Amygdale désactive le "réseau par défaut" pour focaliser l'attention sur l'émotion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Bioéconomie & Adaptation -->
+    <section class="max-w-6xl mx-auto mb-20">
+        <h2 class="text-3xl font-bold mb-10 border-b border-emerald-500 pb-4 uppercase tracking-wider text-center">Bioéconomie Comportementale & Survie</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- La Réponse C-E -->
+            <div class="emerald-card p-8 rounded-2xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center">
+                    <span class="bg-emerald-400 text-emerald-900 w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">1</span>
+                    La Réponse Cognitive-Émotionnelle (C-E)
+                </h3>
+                <div class="space-y-6 relative">
+                    <div class="flex items-start">
+                        <div class="mr-4 mt-1 bg-emerald-800 p-2 rounded">🎯</div>
+                        <div>
+                            <p class="font-bold">A. Perception</p>
+                            <p class="text-sm text-emerald-200">Traitement d'un stimulus environnemental.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mr-4 mt-1 bg-emerald-800 p-2 rounded">⚡</div>
+                        <div>
+                            <p class="font-bold">B. Réponse C-E</p>
+                            <p class="text-sm text-emerald-200">Activation d'un circuit (ex: PEUR). Évaluation de la "rentabilité" de la situation.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mr-4 mt-1 bg-emerald-800 p-2 rounded">🏃</div>
+                        <div>
+                            <p class="font-bold">C. Action</p>
+                            <p class="text-sm text-emerald-200">Action adaptative pour rétablir l'équilibre (Homéostasie).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coût de la Maladaptation -->
+            <div class="emerald-card p-8 rounded-2xl border-l-4 border-red-400">
+                <h3 class="text-xl font-bold mb-6 flex items-center">
+                    <span class="bg-red-400 text-red-900 w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">!</span>
+                    Le Coût de la Maladaptation
+                </h3>
+                <p class="text-sm mb-4">Lorsque les stratégies de <i>coping</i> échouent ou que l'environnement est surchargé (Infostress) :</p>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center"><span class="text-red-400 mr-2">●</span> <b>Activités de substitution :</b> Léchage de nez, bâillements, comportements compulsifs.</li>
+                    <li class="flex items-center"><span class="text-red-400 mr-2">●</span> <b>Déficit systémique :</b> Activation chronique de l'axe du stress (HPA) et libération de cortisol.</li>
+                    <li class="flex items-center"><span class="text-red-400 mr-2">●</span> <b>Pathologies :</b> Troubles immunitaires, dermatites, troubles digestifs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Les 4 F -->
+        <div class="mt-12">
+            <h3 class="text-2xl font-bold mb-6 text-center uppercase tracking-widest text-emerald-300">Les 4 F</h3>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="bg-emerald-900 p-4 rounded-xl border border-emerald-700 text-center">
+                    <span class="block text-xl font-bold mb-1">FIGHT</span>
+                    <span class="text-xs text-emerald-300 uppercase">Attaque de défense</span>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-xl border border-emerald-700 text-center">
+                    <span class="block text-xl font-bold mb-1">FLIGHT</span>
+                    <span class="text-xs text-emerald-300 uppercase">Fuite / Évitement</span>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-xl border border-emerald-700 text-center">
+                    <span class="block text-xl font-bold mb-1">FREEZE</span>
+                    <span class="text-xs text-emerald-300 uppercase">Figement (PAG)</span>
+                </div>
+                <div class="bg-emerald-900 p-4 rounded-xl border border-emerald-700 text-center">
+                    <span class="block text-xl font-bold mb-1">FIDDLE</span>
+                    <span class="text-xs text-emerald-300 uppercase">Déni / Substitution</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section : Adaptation et Homéostasie -->
+        <div class="mt-16 bg-emerald-800/40 p-8 rounded-3xl border border-emerald-500/30">
+            <h3 class="text-2xl font-bold mb-6 text-center uppercase tracking-widest text-emerald-300">Adaptation et Homéostasie</h3>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-emerald-50) leading-relaxed">
+                L'objectif ultime de ces systèmes est le maintien de <b>l'homéostasie</b>, c'est-à-dire l'équilibre physiologique et émotionnel interne.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 bg-emerald-900/60 rounded-xl border border-emerald-600/40">
+                    <h4 class="font-bold text-emerald-400 mb-2 uppercase text-xs">Stress et Besoin</h4>
+                    <p class="text-sm">Le stress est défini comme une réponse physiologique de l'organisme à tout « besoin de nature biologique ».</p>
+                </div>
+                <div class="p-6 bg-emerald-900/60 rounded-xl border border-emerald-600/40">
+                    <h4 class="font-bold text-emerald-400 mb-2 uppercase text-xs">Coping (Faire face)</h4>
+                    <p class="text-sm">Les apprentissages sont des formes d'adaptation (coping) qui permettent à l'individu de répondre aux exigences de son environnement pour rétablir cet équilibre.</p>
+                </div>
+                <div class="p-6 bg-emerald-900/60 rounded-xl border border-emerald-600/40">
+                    <h4 class="font-bold text-emerald-400 mb-2 uppercase text-xs">Résilience</h4>
+                    <p class="text-sm">La capacité de s'adapter définit le niveau de bien-être et la qualité de vie de l'animal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Summary -->
+    <footer class="max-w-4xl mx-auto border-t border-emerald-700 py-12 text-center text-emerald-300">
+        <div class="flex justify-center flex-wrap gap-8 mb-8">
+            <div class="bg-emerald-800/50 p-4 rounded-lg min-w-[150px]">
+                <span class="block text-2xl font-bold text-white">Coping</span>
+                <span class="text-xs uppercase tracking-widest text-emerald-400">Stratégie d'ajustement</span>
+            </div>
+            <div class="bg-emerald-800/50 p-4 rounded-lg min-w-[150px]">
+                <span class="block text-2xl font-bold text-white">Résilience</span>
+                <span class="text-xs uppercase tracking-widest text-emerald-400">Qualité de Vie</span>
+            </div>
+            <div class="bg-emerald-800/50 p-4 rounded-lg min-w-[150px]">
+                <span class="block text-2xl font-bold text-white">Homéostasie</span>
+                <span class="text-xs uppercase tracking-widest text-emerald-400">Équilibre Interne</span>
+            </div>
+        </div>
+        <p class="text-sm italic max-w-2xl mx-auto">
+            "L'apprentissage est une forme d'adaptation permettant à l'individu de trouver des stratégies pour rétablir son équilibre émotionnel et physiologique face aux besoins biologiques."
+        </p>
+    </footer>
+
+</body>
+</html>
