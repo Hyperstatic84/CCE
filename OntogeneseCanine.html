@@ -4,285 +4,274 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ontogénèse du Chien - Chronologie</title>
-    <!-- Chargement des bibliothèques nécessaires uniquement -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .animate-in { animation: fadeIn 0.5s ease-out forwards; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            to   { opacity: 1; transform: translateY(0); }
         }
-        .bg-forest-green {
-            background-color: #0b4619;
-        }
+        .bg-forest-green  { background-color: #0b4619; }
+        .hover\:bg-green-800:hover { background-color: #166534; }
     </style>
+    <!-- Safelist : force Tailwind CDN à générer les classes de dégradé utilisées dynamiquement -->
+    <div class="hidden from-rose-500 to-rose-600 from-blue-500 to-blue-600 from-amber-500 to-amber-600 from-emerald-500 to-emerald-600 from-purple-500 to-purple-600"></div>
 </head>
 <body class="bg-slate-50 text-slate-900">
-    <div id="root"></div>
 
-    <script type="text/babel">
-        const { useState, useEffect } = React;
+<div class="min-h-screen relative pb-8">
+    <main class="max-w-6xl mx-auto px-4 pt-12 pb-20">
 
-        // Composant Icône utilisant Lucide
-        const LucideIcon = ({ name, className = "w-6 h-6" }) => {
-            useEffect(() => {
-                if (window.lucide) {
-                    window.lucide.createIcons();
-                }
-            }, [name]);
-            return <i data-lucide={name} className={className}></i>;
-        };
+        <!-- En-tête -->
+        <div class="animate-in bg-forest-green rounded-3xl p-8 mb-10 text-white shadow-lg border-b-4 border-green-900">
+            <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 text-center md:text-left">Ontogénèse Canine</h1>
+            <p class="text-green-100 text-lg opacity-90 font-medium text-center md:text-left">Étapes de développement du chiot</p>
+        </div>
 
-        // --- Données ---
-        const periods = [
-            {
-                id: 'prenatal',
-                title: 'Prénatale',
-                subtitle: 'La fondation invisible',
-                duration: 'Gestation (~63 jours)',
-                icon: 'dna',
-                color: 'from-rose-500 to-rose-600',
-                description: "Avant même la naissance, le chiot perçoit son environnement via la mère.",
-                keyPoints: [
-                    "Sensibilité tactile précoce (réaction à la palpation dès 45 jours).",
-                    "Influence du stress maternel (cortisol) sur le tempérament futur.",
-                    "Apprentissage gustatif via le liquide amniotique."
-                ],
-                risks: "Stress intense de la mère = chiots plus réactifs et anxieux."
-            },
-            {
-                id: 'neonatal',
-                title: 'Néo-natale',
-                subtitle: 'Le monde des réflexes',
-                duration: '0 à 14 jours',
-                icon: 'baby',
-                color: 'from-blue-500 to-blue-600',
-                description: "Phase végétative. Le cerveau est encore immature (peu de circonvolutions).",
-                keyPoints: [
-                    "Sourds et aveugles (paupières et conduits auditifs clos).",
-                    "Réflexes de survie : succion, fouissement, réflexe périnéal.",
-                    "Sommeil paradoxal dominant (95%) crucial pour le développement cérébral."
-                ],
-                risks: "Absence de stimulation tactile = retard de développement nerveux."
-            },
-            {
-                id: 'transition',
-                title: 'Transition',
-                subtitle: 'L\'éveil des sens',
-                duration: '15 à 21 jours',
-                icon: 'eye',
-                color: 'from-amber-500 to-amber-600',
-                description: "Une phase courte mais intense de métamorphose sensorielle.",
-                keyPoints: [
-                    "Ouverture des yeux (J10-J15) et des oreilles (J14-J20).",
-                    "Début de l'attachement à la mère (reconnaissance visuelle).",
-                    "Premières tentatives de marche et élimination spontanée."
-                ],
-                risks: "Traumatismes sensoriels durant cette phase peuvent marquer durablement."
-            },
-            {
-                id: 'socialisation',
-                title: 'Socialisation',
-                subtitle: 'La fenêtre critique',
-                duration: '3 sem. à 3 mois',
-                icon: 'users',
-                color: 'from-emerald-500 to-emerald-600',
-                description: "La période la plus importante pour l'équilibre du futur chien adulte.",
-                keyPoints: [
-                    "Apprentissage des codes canins (morsure inhibée, postures).",
-                    "Familiarisation aux humains et aux bruits (base de données).",
-                    "Définition du seuil de l'homéostasie sensorielle."
-                ],
-                risks: "Syndrome de privation sensorielle si l'environnement est trop pauvre."
-            },
-            {
-                id: 'juvenile',
-                title: 'Juvénile',
-                subtitle: 'L\'autonomisation',
-                duration: '3 mois à la puberté',
-                icon: 'activity',
-                color: 'from-purple-500 to-purple-600',
-                description: "Consolidation des acquis et exploration du monde extérieur.",
-                keyPoints: [
-                    "Augmentation des capacités motrices et d'endurance.",
-                    "Phases de peur 'secondaires' possibles.",
-                    "Perfectionnement des techniques de chasse et de jeu."
-                ],
-                risks: "Désocialisation si les contacts avec les congénères cessent."
-            }
-        ];
+        <!-- Layout principal -->
+        <div class="animate-in flex flex-col lg:flex-row gap-8">
 
-        const TimelinePage = () => {
-            const [selected, setSelected] = useState(periods[0]);
+            <!-- Colonne gauche : boutons de périodes -->
+            <div id="period-list" class="lg:w-1/3 space-y-3"></div>
 
-            return (
-                <div className="animate-in">
-                    <div className="bg-forest-green rounded-3xl p-8 mb-10 text-white shadow-lg border-b-4 border-green-900">
-                        <div className="flex flex-col justify-center">
-                            <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-2 text-center md:text-left">Ontogénèse Canine</h1>
-                            <p className="text-green-100 text-lg opacity-90 font-medium text-center md:text-left">Étapes de développement du chiot</p>
+            <!-- Colonne droite : panneau de détail -->
+            <div class="lg:flex-1">
+                <div class="rounded-3xl bg-white shadow-xl overflow-hidden border border-slate-100">
+
+                    <!-- Bandeau coloré -->
+                    <div id="detail-header" class="h-32 bg-gradient-to-r p-8 flex items-end text-white">
+                        <div>
+                            <h3 id="detail-title" class="text-2xl md:text-3xl font-bold"></h3>
+                            <p id="detail-subtitle" class="font-medium opacity-80 text-sm md:text-base"></p>
                         </div>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row gap-8">
-                        <div className="lg:w-1/3 space-y-3">
-                            {periods.map((p) => (
-                                <button
-                                    key={p.id}
-                                    onClick={() => setSelected(p)}
-                                    className={`w-full text-left p-4 rounded-2xl border-2 transition-all flex items-center justify-between group ${
-                                        selected.id === p.id 
-                                        ? 'border-green-600 bg-green-50 text-green-900 shadow-sm' 
-                                        : 'border-transparent bg-white text-slate-600 hover:border-slate-200 shadow-sm'
-                                    }`}
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <div className={`p-2 rounded-lg ${selected.id === p.id ? 'bg-green-600 text-white' : 'bg-slate-100'}`}>
-                                            <LucideIcon name={p.icon} className="w-5 h-5" />
-                                        </div>
-                                        <div>
-                                            <div className="font-bold text-sm md:text-base">{p.title}</div>
-                                            <div className="text-xs opacity-70">{p.duration}</div>
-                                        </div>
-                                    </div>
-                                    <LucideIcon name="chevron-right" className={`w-4 h-4 ${selected.id === p.id ? 'translate-x-1' : 'opacity-30'}`} />
-                                </button>
-                            ))}
-                        </div>
+                    <div class="p-6 md:p-8">
+                        <p id="detail-description" class="text-slate-600 mb-6 text-sm md:text-base italic"></p>
 
-                        <div className="lg:flex-1">
-                            <div className="rounded-3xl bg-white shadow-xl overflow-hidden border border-slate-100">
-                                <div className={`h-32 bg-gradient-to-r ${selected.color} p-8 flex items-end text-white`}>
-                                    <div>
-                                        <h3 className="text-2xl md:text-3xl font-bold">{selected.title}</h3>
-                                        <p className="font-medium opacity-80 text-sm md:text-base">{selected.subtitle}</p>
-                                    </div>
-                                </div>
-                                <div className="p-6 md:p-8">
-                                    <p className="text-slate-600 mb-6 text-sm md:text-base italic">
-                                        {selected.description}
-                                    </p>
-                                    
-                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                                        <LucideIcon name="check-circle" className="w-4 h-4" /> Acquisitions Clés
-                                    </h4>
-                                    <div className="grid gap-3 mb-8">
-                                        {selected.keyPoints.map((point, idx) => (
-                                            <div key={idx} className="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                                <div className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 text-xs font-bold">{idx+1}</div>
-                                                <p className="text-slate-700 text-sm leading-relaxed">{point}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="bg-rose-50 border border-rose-100 p-4 rounded-xl flex gap-3">
-                                        <LucideIcon name="alert-triangle" className="text-rose-500 w-5 h-5 flex-shrink-0" />
-                                        <div>
-                                            <p className="text-rose-900 font-bold text-sm">Risques</p>
-                                            <p className="text-rose-700 text-xs">{selected.risks}</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4"></i> Acquisitions Clés
+                        </h4>
+                        <div id="detail-keypoints" class="grid gap-3 mb-8"></div>
+
+                        <div class="bg-rose-50 border border-rose-100 p-4 rounded-xl flex gap-3">
+                            <i data-lucide="alert-triangle" class="text-rose-500 w-5 h-5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-rose-900 font-bold text-sm">Risques</p>
+                                <p id="detail-risks" class="text-rose-700 text-xs"></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            );
-        };
+            </div>
+        </div>
 
-        const App = () => {
-            return (
-                <div className="min-h-screen relative pb-8">
-                    <main className="max-w-6xl mx-auto px-4 pt-12 pb-20">
-                        <TimelinePage />
+        <!-- Lexique Neurobiologique -->
+        <div class="mt-20">
+            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-8 text-center">Lexique Neurobiologique</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                        {/* Grille des concepts */}
-                        <div className="mt-20">
-                            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-8 text-center">Lexique Neurobiologique</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                                
-                                {/* Neurogenèse */}
-                                <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                    <div className="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-500 mb-6">
-                                        <LucideIcon name="zap" className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-extrabold text-slate-900 mb-3">Neurogenèse</h3>
-                                    <div className="space-y-3">
-                                        <p className="text-sm text-slate-600 leading-relaxed">
-                                            Phase critique de prolifération neuronale à partir de la plaque neurale. 
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Myélinisation */}
-                                <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                    <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 mb-6">
-                                        <LucideIcon name="shield" className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-extrabold text-slate-900 mb-3">Myélinisation</h3>
-                                    <div className="space-y-3">
-                                        <p className="text-sm text-slate-600 leading-relaxed">
-                                            Isolation des axones par les cellules de Schwann et oligodendrocytes.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Synaptogénèse */}
-                                <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                    <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-500 mb-6">
-                                        <LucideIcon name="git-branch" className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-extrabold text-slate-900 mb-3">Synaptogénèse</h3>
-                                    <div className="space-y-3">
-                                        <p className="text-sm text-slate-600 leading-relaxed">
-                                            Création de réseaux synaptiques via la stimulation environnementale.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Élagage Neuronal */}
-                                <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                    <div className="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 mb-6">
-                                        <LucideIcon name="scissors" className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-extrabold text-slate-900 mb-3">Élagage Neuronal</h3>
-                                    <div className="space-y-3">
-                                        <p className="text-sm text-slate-600 leading-relaxed">
-                                            Élimination des synapses inutilisées pour optimiser l'efficacité cérébrale.
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </main>
-
-                    <footer className="py-8 border-t border-slate-200 text-center bg-white mt-auto">
-                        <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em]">
-                            © 2026 Thomas Le Blanc
-                        </p>
-                    </footer>
-
-                    {/* BOUTON FLOTTANT RETOUR */}
-                    <a 
-                        href="index.html" 
-                        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-forest-green text-white p-4 rounded-full shadow-lg border-2 border-white hover:bg-green-800 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 z-50 group flex items-center justify-center"
-                        title="Retour à l'accueil"
-                    >
-                        <LucideIcon name="arrow-left" className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
-                    </a>
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-500 mb-6">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-3">Neurogenèse</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Phase critique de prolifération neuronale à partir de la plaque neurale.</p>
                 </div>
-            );
-        };
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 mb-6">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-3">Myélinisation</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Isolation des axones par les cellules de Schwann et oligodendrocytes.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-500 mb-6">
+                        <i data-lucide="git-branch" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-3">Synaptogénèse</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Création de réseaux synaptiques via la stimulation environnementale.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 mb-6">
+                        <i data-lucide="scissors" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-3">Élagage Neuronal</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Élimination des synapses inutilisées pour optimiser l'efficacité cérébrale.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 border-t border-slate-200 text-center bg-white mt-auto">
+        <p class="text-slate-400 text-[10px] uppercase tracking-[0.2em]">© 2026 Thomas Le Blanc</p>
+    </footer>
+
+    <!-- Bouton flottant retour -->
+    <a
+        href="index.html"
+        class="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-forest-green text-white p-4 rounded-full shadow-lg border-2 border-white hover:bg-green-800 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 z-50 flex items-center justify-center"
+        aria-label="Retour à l'accueil"
+    >
+        <i data-lucide="arrow-left" class="w-6 h-6"></i>
+    </a>
+</div>
+
+<script>
+    const periods = [
+        {
+            id: 'prenatal',
+            title: 'Prénatale',
+            subtitle: 'La fondation invisible',
+            duration: 'Gestation (~63 jours)',
+            icon: 'dna',
+            gradient: 'from-rose-500 to-rose-600',
+            description: "Avant même la naissance, le chiot perçoit son environnement via la mère.",
+            keyPoints: [
+                "Sensibilité tactile précoce (réaction à la palpation dès 45 jours).",
+                "Influence du stress maternel (cortisol) sur le tempérament futur.",
+                "Apprentissage gustatif via le liquide amniotique."
+            ],
+            risks: "Stress intense de la mère = chiots plus réactifs et anxieux."
+        },
+        {
+            id: 'neonatal',
+            title: 'Néo-natale',
+            subtitle: 'Le monde des réflexes',
+            duration: '0 à 14 jours',
+            icon: 'baby',
+            gradient: 'from-blue-500 to-blue-600',
+            description: "Phase végétative. Le cerveau est encore immature (peu de circonvolutions).",
+            keyPoints: [
+                "Sourds et aveugles (paupières et conduits auditifs clos).",
+                "Réflexes de survie : succion, fouissement, réflexe périnéal.",
+                "Sommeil paradoxal dominant (95%) crucial pour le développement cérébral."
+            ],
+            risks: "Absence de stimulation tactile = retard de développement nerveux."
+        },
+        {
+            id: 'transition',
+            title: 'Transition',
+            subtitle: "L'éveil des sens",
+            duration: '15 à 21 jours',
+            icon: 'eye',
+            gradient: 'from-amber-500 to-amber-600',
+            description: "Une phase courte mais intense de métamorphose sensorielle.",
+            keyPoints: [
+                "Ouverture des yeux (J10-J15) et des oreilles (J14-J20).",
+                "Début de l'attachement à la mère (reconnaissance visuelle).",
+                "Premières tentatives de marche et élimination spontanée."
+            ],
+            risks: "Traumatismes sensoriels durant cette phase peuvent marquer durablement."
+        },
+        {
+            id: 'socialisation',
+            title: 'Socialisation',
+            subtitle: 'La fenêtre critique',
+            duration: '3 sem. à 3 mois',
+            icon: 'users',
+            gradient: 'from-emerald-500 to-emerald-600',
+            description: "La période la plus importante pour l'équilibre du futur chien adulte.",
+            keyPoints: [
+                "Apprentissage des codes canins (morsure inhibée, postures).",
+                "Familiarisation aux humains et aux bruits (base de données).",
+                "Définition du seuil de l'homéostasie sensorielle."
+            ],
+            risks: "Syndrome de privation sensorielle si l'environnement est trop pauvre."
+        },
+        {
+            id: 'juvenile',
+            title: 'Juvénile',
+            subtitle: "L'autonomisation",
+            duration: '3 mois à la puberté',
+            icon: 'activity',
+            gradient: 'from-purple-500 to-purple-600',
+            description: "Consolidation des acquis et exploration du monde extérieur.",
+            keyPoints: [
+                "Augmentation des capacités motrices et d'endurance.",
+                "Phases de peur 'secondaires' possibles.",
+                "Perfectionnement des techniques de chasse et de jeu."
+            ],
+            risks: "Désocialisation si les contacts avec les congénères cessent."
+        }
+    ];
+
+    let selectedId = periods[0].id;
+
+    function renderButtons() {
+        const list = document.getElementById('period-list');
+        list.innerHTML = periods.map(p => {
+            const isActive = p.id === selectedId;
+            return `
+                <button
+                    data-id="${p.id}"
+                    class="w-full text-left p-4 rounded-2xl border-2 transition-all flex items-center justify-between
+                           ${isActive
+                               ? 'border-green-600 bg-green-50 text-green-900 shadow-sm'
+                               : 'border-transparent bg-white text-slate-600 hover:border-slate-200 shadow-sm'}"
+                >
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded-lg ${isActive ? 'bg-green-600 text-white' : 'bg-slate-100'}">
+                            <i data-lucide="${p.icon}" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm md:text-base">${p.title}</div>
+                            <div class="text-xs opacity-70">${p.duration}</div>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 transition-transform ${isActive ? 'translate-x-1' : 'opacity-30'}"></i>
+                </button>`;
+        }).join('');
+
+        list.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => selectPeriod(btn.dataset.id));
+        });
+
+        lucide.createIcons({ attrs: { 'stroke-width': 2 } });
+    }
+
+    function renderDetail(period) {
+        const header = document.getElementById('detail-header');
+
+        // Remplace l'ancienne couleur de dégradé
+        const prev = header.dataset.gradient;
+        if (prev) header.classList.remove(...prev.split(' '));
+        header.classList.add(...period.gradient.split(' '));
+        header.dataset.gradient = period.gradient;
+
+        document.getElementById('detail-title').textContent       = period.title;
+        document.getElementById('detail-subtitle').textContent    = period.subtitle;
+        document.getElementById('detail-description').textContent = period.description;
+        document.getElementById('detail-risks').textContent       = period.risks;
+
+        document.getElementById('detail-keypoints').innerHTML = period.keyPoints
+            .map((pt, i) => `
+                <div class="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 text-xs font-bold">${i + 1}</div>
+                    <p class="text-slate-700 text-sm leading-relaxed">${pt}</p>
+                </div>`)
+            .join('');
+
+        lucide.createIcons({ attrs: { 'stroke-width': 2 } });
+    }
+
+    function selectPeriod(id) {
+        selectedId = id;
+        renderButtons();
+        renderDetail(periods.find(p => p.id === id));
+    }
+
+    // Rendu initial
+    renderButtons();
+    renderDetail(periods[0]);
+    lucide.createIcons({ attrs: { 'stroke-width': 2 } });
+</script>
 </body>
 </html>
