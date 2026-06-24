@@ -5,115 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comportementalisme Canin / Éthologie</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #062c1e; /* Vert forêt profond */
-        }
-        .serif-title {
-            font-family: 'Playfair Display', serif;
-        }
-        .forest-gradient {
-            background: linear-gradient(135deg, #0b3d2e 0%, #052219 100%);
-        }
-        .btn-forest {
+        body { font-family: 'Inter', sans-serif; }
+        ::selection { background-color: #059669; color: #ffffff; }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+        .btn-nav {
             transition: all 0.3s ease;
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
         }
-        .btn-forest:hover {
-            background-color: #2d5a27;
-            border-color: #4a8c43;
+        .btn-nav:hover {
+            background-color: rgba(5,150,105,0.15);
+            border-color: rgba(52,211,153,0.4);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-        .overlay-pattern {
-            background-image: url("https://www.transparenttextures.com/patterns/leaf.png");
-            opacity: 0.05;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
     </style>
 </head>
-<body class="text-white min-h-screen flex flex-col items-center relative overflow-y-auto">
-    
-    <!-- Éléments d'arrière-plan (Fixés pour rester immobiles au scroll) -->
-    <div class="fixed inset-0 forest-gradient -z-20"></div>
-    <div class="fixed inset-0 overlay-pattern -z-10"></div>
-    
-    <!-- Contenu Principal -->
-    <main class="z-10 w-full max-w-2xl px-6 py-12 md:py-20 text-center flex flex-col items-center">
-        
+<body class="bg-gray-950 text-gray-300 font-sans antialiased min-h-screen flex flex-col items-center">
+
+    <!-- Arrière-plan radial -->
+    <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-950/30 via-gray-950 to-gray-950 -z-10 pointer-events-none"></div>
+
+    <main class="z-10 w-full max-w-xl px-6 py-16 md:py-24 text-center flex flex-col items-center">
+
         <!-- En-tête -->
-        <header class="mb-12">
-            <h1 class="serif-title text-4xl md:text-5xl lg:text-6xl mb-4 tracking-tight">
-                Comportementalisme Canin <br>
-                <span class="text-emerald-400 font-light">& Éthologie</span>
+        <header class="mb-14 fade-in">
+            <div class="inline-flex items-center justify-center p-4 bg-emerald-900/30 rounded-full mb-8 border border-emerald-700/50">
+                <i data-lucide="paw-print" class="w-10 h-10 text-emerald-400"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-3">
+                Comportementalisme Canin
             </h1>
+            <p class="text-2xl md:text-3xl font-light text-emerald-400">& Éthologie</p>
         </header>
 
-        <!-- Boutons de Navigation -->
-        <nav class="flex flex-col space-y-4 w-full max-w-md mx-auto">
+        <!-- Navigation -->
+        <nav class="flex flex-col space-y-3 w-full fade-in delay-100">
 
-            <a href="OntogeneseCanine.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Ontogénèse Canine</span>
+            <a href="OntogeneseCanine.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Ontogénèse Canine
             </a>
-            
-            <a href="Sentience.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Bien-Être Animal & Sentience</span>
+            <a href="Sentience.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Bien-Être Animal &amp; Sentience
             </a>
-
-            <a href="3B.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Bien-être, Bienveillance et Bientraitance</span>
+            <a href="3B.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Bien-être, Bienveillance et Bientraitance
             </a>
-
-            <a href="Ethogramme.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Ethogramme du chien</span>
+            <a href="Ethogramme.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Ethogramme du chien
             </a>
-
-            <a href="Biologie.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Biologie</span>
+            <a href="Biologie.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Biologie
             </a>
-
-            <a href="Epistemologie.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Epistémologie des sciences</span>
+            <a href="Epistemologie.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Épistémologie des sciences
             </a>
-
-            <a href="Science.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Science de l’éthologie</span>
+            <a href="Science.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Science de l'éthologie
             </a>
-
-            <a href="CognitionMétacognition.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Cognition / Métacognition</span>
+            <a href="CognitionMétacognition.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Cognition / Métacognition
             </a>
-
-            <a href="ComInterIntra.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Communication inter et intra spécifique du chien</span>
+            <a href="ComInterIntra.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Communication inter et intra spécifique
             </a>
-
-            <a href="Apprentissages.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Théorie des apprentissages</span>
+            <a href="Apprentissages.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Théorie des apprentissages
             </a>
-            
-            <a href="Umwelt.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Umwelt | Gestalt | Proxémie</span>
+            <a href="Umwelt.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Umwelt | Gestalt | Proxémie
             </a>
-
-            <a href="CognitivoEmo.html" class="btn-forest py-4 px-12 rounded-xl font-medium text-lg group">
-                <span>Réponse cognitivo-émotionnelle</span>
+            <a href="CognitivoEmo.html" class="btn-nav py-4 px-8 rounded-xl font-medium text-gray-200 text-base">
+                Réponse cognitivo-émotionnelle
             </a>
 
         </nav>
 
-        <!-- Footer -->
-        <footer class="mt-16 pb-8 text-gray-400 text-sm">
-            <p>© 2026 Thomas Le Blanc</p>
+        <footer class="mt-16 pb-8 fade-in delay-200">
+            <p class="text-gray-600 text-[10px] uppercase tracking-[0.2em]">© 2026 Thomas Le Blanc</p>
         </footer>
 
     </main>
 
+    <script>lucide.createIcons();</script>
 </body>
 </html>
